@@ -4,16 +4,17 @@ import styled from 'styled-components';
 
 const CategoryContainer = styled.div`
   width: 100%;
-  height: 100vh; /* Adjust height as needed */
-  background-size: cover;
-  background-position: center;
+  height: 110vh;
+  background-size: cover; /* Ensure the background image covers the entire container */
+  background-position: center; /* Adjust the position based on your preference */
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-  cursor : pointer;
+  cursor: pointer;
+  margin-top : 15px;
 
-  h2{
-    color : #fff;
+  h2 {
+    color: #fff;
   }
 
   &:after {
@@ -42,13 +43,16 @@ const ContentWrapper = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  width : 100vw;
 `;
 
 const CategoryComponent = ({ category, horizontalImage, verticalImage, shopNowLink }) => {
   return (
-    <CategoryContainer horizontalImage={horizontalImage} verticalImage={verticalImage}>
-      <ContentWrapper >
-        <h2 className='text-3xl md:text-6xl sm:text-5xl text-gray-100  font-bold'>{category}</h2>
+    <CategoryContainer
+     horizontalImage={horizontalImage} 
+     verticalImage={verticalImage}>
+      <ContentWrapper>
+        <h2 className='text-3xl md:text-6xl lg:text-5xl text-gray-100 font-bold'>{category}</h2>
       </ContentWrapper>
     </CategoryContainer>
   );

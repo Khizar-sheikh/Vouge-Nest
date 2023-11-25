@@ -1,0 +1,2005 @@
+{
+  "menShirts": [
+    {
+      "id": 1,
+      "name": "Cotton Polo Shirt",
+      "price": 29.99,
+      "description": [
+        "100% cotton material",
+        "Regular fit",
+        "Classic polo collar",
+        "Suitable for casual occasions"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L", "XL"],
+        "color": "Navy Blue",
+        "material": "Cotton"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.5,
+        "count": 20
+      },
+      "createdAt": "2023-10-10T08:00:00Z",
+      "soldCount": 15,
+      "featured": true
+    },
+    {
+      "id": 2,
+      "name": "Striped Button-Up Shirt",
+      "price": 34.99,
+      "description": [
+        "Premium quality fabric",
+        "Vertical striped pattern",
+        "Button-up closure",
+        "Elegant and stylish design"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["M", "L", "XL"],
+        "color": "White/Black",
+        "material": "Polyester"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.2,
+        "count": 18
+      },
+      "createdAt": "2023-09-05T08:00:00Z",
+      "soldCount": 12,
+      "featured": true
+    },
+    {
+      "id": 3,
+      "name": "Linen Casual Shirt",
+      "price": 27.99,
+      "description": [
+        "Breathable linen material",
+        "Casual and relaxed fit",
+        "Ideal for warm weather",
+        "Available in various colors"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "L", "XL"],
+        "color": "Beige",
+        "material": "Linen"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.7,
+        "count": 25
+      },
+      "createdAt": "2023-08-20T08:00:00Z",
+      "soldCount": 18,
+      "featured": true
+    },
+    {
+      "id": 4,
+      "name": "Denim Classic Shirt",
+      "price": 39.99,
+      "description": [
+        "Classic denim fabric",
+        "Button-down style",
+        "Versatile and timeless",
+        "Available in multiple sizes"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["M", "L", "XL"],
+        "color": "Blue",
+        "material": "Denim"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.4,
+        "count": 22
+      },
+      "createdAt": "2023-11-02T08:00:00Z",
+      "soldCount": 16,
+      "featured": true
+    },
+    {
+      "id": 5,
+      "name": "Slim Fit Plaid Shirt",
+      "price": 42.99,
+      "description": [
+        "Slim fit design",
+        "Plaid pattern",
+        "Button-up closure",
+        "Comfortable and breathable"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L"],
+        "color": "Red/Black",
+        "material": "Cotton"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.3,
+        "count": 19
+      },
+      "createdAt": "2023-11-15T08:00:00Z",
+      "soldCount": 14,
+      "featured": true
+    },
+    {
+      "id": 6,
+      "name": "Casual Striped Shirt",
+      "price": 31.99,
+      "description": [
+        "Casual and versatile",
+        "Horizontal striped pattern",
+        "Regular fit",
+        "Soft and lightweight fabric"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["M", "L"],
+        "color": "Green/White",
+        "material": "Cotton Blend"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.6,
+        "count": 17
+      },
+      "createdAt": "2023-11-05T08:00:00Z",
+      "soldCount": 11,
+      "featured": true
+    },
+    {
+      "id": 7,
+      "name": "Oxford Dress Shirt",
+      "price": 45.99,
+      "description": [
+        "Classic Oxford style",
+        "Button-down collar",
+        "Formal and elegant",
+        "Available in various colors"
+      ],
+      "image": "product1",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["L", "XL"],
+        "color": "White",
+        "material": "Cotton Blend"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.8,
+        "count": 23
+      },
+      "createdAt": "2023-10-25T08:00:00Z",
+      "soldCount": 20,
+      "featured": true
+    },
+    {
+      "id": 8,
+      "name": "Flannel Shirt",
+      "price": 37.99,
+      "description": [
+        "Warm and cozy flannel",
+        "Checkered pattern",
+        "Snap-button closure",
+        "Perfect for colder seasons"
+      ],
+      "image": "product1",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L"],
+        "color": "Red/Blue",
+        "material": "Flannel"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.0,
+        "count": 14
+      },
+      "createdAt": "2023-10-18T08:00:00Z",
+      "soldCount": 9,
+      "featured": true
+    },
+
+    {
+      "id": 9,
+      "name": "Slim-Fit Checked Shirt",
+      "price": 36.99,
+      "description": [
+        "Slim-fit design",
+        "Checkered pattern",
+        "Button-up closure",
+        "Comfortable for everyday wear"
+      ],
+      "image": "product1",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L"],
+        "color": "Blue/White",
+        "material": "Cotton"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.2,
+        "count": 16
+      },
+      "createdAt": "2023-10-31T08:00:00Z",
+      "soldCount": 12,
+      "featured": true
+    },
+    {
+      "id": 10,
+      "name": "Crew Neck T-Shirt",
+      "price": 19.99,
+      "description": [
+        "Comfortable crew neck",
+        "Solid color design",
+        "Perfect for layering",
+        "Soft and breathable fabric"
+      ],
+      "image": "product1",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L", "XL"],
+        "color": "Gray",
+        "material": "Cotton Blend"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.6,
+        "count": 19
+      },
+      "createdAt": "2023-10-08T08:00:00Z",
+      "soldCount": 15,
+      "featured": true
+    },
+    {
+      "id": 11,
+      "name": "Long Sleeve Polo Shirt",
+      "price": 28.99,
+      "description": [
+        "Classic long sleeve design",
+        "Polo collar",
+        "Stretchable fabric",
+        "Great for casual outings"
+      ],
+      "image": "product1",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["M", "L", "XL"],
+        "color": "Black",
+        "material": "Polyester"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.4,
+        "count": 18
+      },
+      "createdAt": "2023-09-22T08:00:00Z",
+      "soldCount": 14,
+      "featured": true
+    },
+    {
+      "id": 12,
+      "name": "Hawaiian Floral Shirt",
+      "price": 32.99,
+      "description": [
+        "Vibrant floral print",
+        "Short sleeve design",
+        "Relaxed fit",
+        "Perfect for beach days"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "L", "XL"],
+        "color": "Multicolor",
+        "material": "Rayon"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.8,
+        "count": 22
+      },
+      "createdAt": "2023-11-08T08:00:00Z",
+      "soldCount": 17,
+      "featured": false
+    },
+    {
+      "id": 13,
+      "name": "Flannel Button-Up Shirt",
+      "price": 34.99,
+      "description": [
+        "Soft flannel fabric",
+        "Button-up closure",
+        "Plaid pattern",
+        "Versatile for casual wear"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L"],
+        "color": "Red/Black",
+        "material": "Flannel"
+      },
+      "availability": false,
+      "ratings": {
+        "average": 4.3,
+        "count": 14
+      },
+      "createdAt": "2023-11-15T08:00:00Z",
+      "soldCount": 10,
+      "featured": false
+    },
+    {
+      "id": 14,
+      "name": "Oxford Button-Down Shirt",
+      "price": 31.99,
+      "description": [
+        "Classic oxford fabric",
+        "Button-down collar",
+        "Timeless and elegant",
+        "Suitable for formal occasions"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["M", "L", "XL"],
+        "color": "Light Blue",
+        "material": "Cotton Blend"
+      },
+      "availability": false,
+      "ratings": {
+        "average": 4.5,
+        "count": 17
+      },
+      "createdAt": "2023-10-28T08:00:00Z",
+      "soldCount": 13,
+      "featured": false
+    },
+    {
+      "id": 15,
+      "name": "Slim-Fit Linen Shirt",
+      "price": 29.99,
+      "description": [
+        "Slim-fit silhouette",
+        "Lightweight linen material",
+        "Button-up closure",
+        "Perfect for warm climates"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L", "XL"],
+        "color": "Off-White",
+        "material": "Linen"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.7,
+        "count": 16
+      },
+      "createdAt": "2023-10-16T08:00:00Z",
+      "soldCount": 12,
+      "featured": false
+    },
+    {
+      "id": 16,
+      "name": "Casual Button-Down Shirt",
+      "price": 26.99,
+      "description": [
+        "Relaxed casual style",
+        "Button-down collar",
+        "Versatile for everyday wear",
+        "Breathable fabric"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["M", "L", "XL"],
+        "color": "Gray",
+        "material": "Cotton"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.4,
+        "count": 15
+      },
+      "createdAt": "2023-11-03T08:00:00Z",
+      "soldCount": 11,
+      "featured": false
+    },
+    {
+      "id": 17,
+      "name": "V-Neck T-Shirt",
+      "price": 18.99,
+      "description": [
+        "Simple v-neck design",
+        "Comfortable and breathable",
+        "Easy to style",
+        "Available in multiple colors"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L", "XL"],
+        "color": "Black",
+        "material": "Cotton Blend"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.6,
+        "count": 19
+      },
+      "createdAt": "2023-10-12T08:00:00Z",
+      "soldCount": 14,
+      "featured": false
+    },
+    {
+      "id": 18,
+      "name": "Printed Short-Sleeve Shirt",
+      "price": 22.99,
+      "description": [
+        "Printed pattern design",
+        "Short sleeves",
+        "Lightweight fabric",
+        "Casual and stylish"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["M", "L", "XL"],
+        "color": "Navy Blue",
+        "material": "Cotton"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.2,
+        "count": 18
+      },
+      "createdAt": "2023-11-10T08:00:00Z",
+      "soldCount": 13,
+      "featured": false
+    },
+    {
+      "id": 19,
+      "name": "Classic Fit T-Shirt",
+      "price": 20.99,
+      "description": [
+        "Regular classic fit",
+        "Soft and comfortable fabric",
+        "Versatile for various occasions",
+        "Available in multiple sizes"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L", "XL"],
+        "color": "White",
+        "material": "Cotton Blend"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.7,
+        "count": 17
+      },
+      "createdAt": "2023-10-24T08:00:00Z",
+      "soldCount": 12,
+      "featured": false
+    },
+    {
+      "id": 20,
+      "name": "Plaid Flannel Shirt",
+      "price": 33.99,
+      "description": [
+        "Classic plaid design",
+        "Warm flannel fabric",
+        "Button-up closure",
+        "Stylish and cozy"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["M", "L", "XL"],
+        "color": "Red/Black/White",
+        "material": "Flannel"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.4,
+        "count": 16
+      },
+      "createdAt": "2023-10-18T08:00:00Z",
+      "soldCount": 11,
+      "featured": false
+    },
+    {
+      "id": 21,
+      "name": "Pocket Detail Shirt",
+      "price": 30.99,
+      "description": [
+        "Button-up style",
+        "Chest pocket detail",
+        "Comfortable and versatile",
+        "Available in multiple colors"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L"],
+        "color": "Gray",
+        "material": "Cotton"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.6,
+        "count": 15
+      },
+      "createdAt": "2023-11-05T08:00:00Z",
+      "soldCount": 10,
+      "featured": false
+    },
+    {
+      "id": 22,
+      "name": "Silk Button-Up Shirt",
+      "price": 39.99,
+      "description": [
+        "Luxurious silk fabric",
+        "Button-up closure",
+        "Smooth and comfortable",
+        "Great for formal events"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["M", "L"],
+        "color": "Black",
+        "material": "Silk"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.8,
+        "count": 18
+      },
+      "createdAt": "2023-10-29T08:00:00Z",
+      "soldCount": 14,
+      "featured": false
+    },
+    {
+      "id": 23,
+      "name": "Tropical Print Shirt",
+      "price": 26.99,
+      "description": [
+        "Vibrant tropical print",
+        "Short sleeve design",
+        "Lightweight and breezy",
+        "Perfect for vacations"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L"],
+        "color": "Multicolor",
+        "material": "Polyester"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.5,
+        "count": 17
+      },
+      "createdAt": "2023-10-21T08:00:00Z",
+      "soldCount": 13,
+      "featured": false
+    },
+    {
+      "id": 24,
+      "name": "Tie-Dye Print T-Shirt",
+      "price": 21.99,
+      "description": [
+        "Unique tie-dye design",
+        "Short sleeves",
+        "Comfortable and stylish",
+        "Available in multiple colors"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L"],
+        "color": "Multicolor",
+        "material": "Cotton Blend"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.3,
+        "count": 16
+      },
+      "createdAt": "2023-11-12T08:00:00Z",
+      "soldCount": 12,
+      "featured": false
+    },
+    {
+      "id": 25,
+      "name": "Polo Shirt with Pocket",
+      "price": 27.99,
+      "description": [
+        "Classic polo style",
+        "Chest pocket detail",
+        "Comfortable fit",
+        "Available in various colors"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["M", "L", "XL"],
+        "color": "Gray",
+        "material": "Cotton"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.5,
+        "count": 18
+      },
+      "createdAt": "2023-11-08T08:00:00Z",
+      "soldCount": 14,
+      "featured": false
+    },
+    {
+      "id": 26,
+      "name": "Striped Linen Shirt",
+      "price": 29.99,
+      "description": [
+        "Striped linen fabric",
+        "Button-up closure",
+        "Casual and comfortable",
+        "Ideal for warm weather"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L"],
+        "color": "Blue/White",
+        "material": "Linen"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.4,
+        "count": 15
+      },
+      "createdAt": "2023-11-01T08:00:00Z",
+      "soldCount": 11,
+      "featured": false
+    },
+    {
+      "id": 27,
+      "name": "Sleeveless Muscle Tee",
+      "price": 18.99,
+      "description": [
+        "Sleeveless style",
+        "Regular fit",
+        "Great for workouts",
+        "Soft and breathable fabric"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["M", "L", "XL"],
+        "color": "Black",
+        "material": "Cotton Blend"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.6,
+        "count": 17
+      },
+      "createdAt": "2023-10-30T08:00:00Z",
+      "soldCount": 13,
+      "featured": false
+    },
+    {
+      "id": 28,
+      "name": "Cropped Denim Shirt",
+      "price": 33.99,
+      "description": [
+        "Cropped length",
+        "Denim fabric",
+        "Button-up closure",
+        "Trendy and stylish"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L"],
+        "color": "Blue",
+        "material": "Denim"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.2,
+        "count": 18
+      },
+      "createdAt": "2023-10-25T08:00:00Z",
+      "soldCount": 14,
+      "featured": false
+    },
+    {
+      "id": 29,
+      "name": "Printed Linen Shirt",
+      "price": 28.99,
+      "description": [
+        "Printed linen fabric",
+        "Button-up closure",
+        "Casual and relaxed fit",
+        "Available in multiple colors"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["M", "L", "XL"],
+        "color": "Green",
+        "material": "Linen"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.3,
+        "count": 19
+      },
+      "createdAt": "2023-11-06T08:00:00Z",
+      "soldCount": 15,
+      "featured": false
+    },
+    {
+      "id": 30,
+      "name": "Hooded Sweatshirt",
+      "price": 36.99,
+      "description": [
+        "Casual hoodie style",
+        "Soft and warm",
+        "Perfect for layering",
+        "Available in various colors"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L"],
+        "color": "Gray",
+        "material": "Cotton Blend"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.7,
+        "count": 20
+      },
+      "createdAt": "2023-11-09T08:00:00Z",
+      "soldCount": 16,
+      "featured": false
+    },
+    {
+      "id": 31,
+      "name": "Scoop Neck T-Shirt",
+      "price": 19.99,
+      "description": [
+        "Scoop neckline",
+        "Regular fit",
+        "Soft and stretchy fabric",
+        "Available in multiple colors"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["M", "L", "XL"],
+        "color": "White",
+        "material": "Cotton Blend"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.6,
+        "count": 18
+      },
+      "createdAt": "2023-11-13T08:00:00Z",
+      "soldCount": 14,
+      "featured": false
+    },
+    {
+      "id": 32,
+      "name": "Checked Flannel Shirt",
+      "price": 32.99,
+      "description": [
+        "Classic checked pattern",
+        "Warm flannel fabric",
+        "Button-up closure",
+        "Stylish and comfortable"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["S", "M", "L"],
+        "color": "Red/Black/White",
+        "material": "Flannel"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.4,
+        "count": 19
+      },
+      "createdAt": "2023-11-14T08:00:00Z",
+      "soldCount": 15,
+      "featured": false
+    },
+    {
+      "id": 33,
+      "name": "V-Neck Casual T-Shirt",
+      "price": 22.99,
+      "description": [
+        "Casual V-neck style",
+        "Regular fit",
+        "Soft and breathable",
+        "Available in multiple colors"
+      ],
+      "image": "product2",
+      "category": "mens",
+      "type": "Shirt",
+      "attributes": {
+        "size": ["M", "L", "XL"],
+        "color": "Black",
+        "material": "Cotton Blend"
+      },
+      "availability": true,
+      "ratings": {
+        "average": 4.5,
+        "count": 17
+      },
+      "createdAt": "2023-11-15T08:00:00Z",
+      "soldCount": 13,
+      "featured": false
+    }
+  ],
+  "menBottoms": [
+   {
+     "id": 34,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 24.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "Black",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 35,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 26.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "Black",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 36,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 22.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "Black",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 37,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 22.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "Black",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 38,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 22.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "Black",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 39,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 22.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "Black",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 40,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 22.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "Black",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 41,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 22.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "Black",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 43,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 22.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "Black",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 44,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 7.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "Black",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 45,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 87.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "Black",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 46,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 54.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "Black",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 47,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 88.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "Black",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 48,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 91.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 49,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 90.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 50,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 89.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 51,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 25.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 52,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 23.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 53,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 55.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 54,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 34.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 55,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 16.69,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "red",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": false
+  },
+   {
+     "id": 56,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 14.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "red",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 57,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 13.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "red",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 58,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 12.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "red",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 59,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 11.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "red",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 60,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 55.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "red",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 61,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 11.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "red",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 62,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 55.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "red",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+  {
+    "id": 63,
+   "name": "V-Neck Casual T-Shirt",
+   "price": 22.99,
+   "description": [
+     "Casual V-neck style",
+     "Regular fit",
+     "Soft and breathable",
+     "Available in multiple colors"
+   ],
+   "image": "product3",
+   "category": "mens",
+   "type": "Shirt",
+   "attributes": {
+     "size": ["M", "L", "XL"],
+     "color": "red",
+     "material": "Cotton Blend"
+   },
+   "availability": true,
+   "ratings": {
+     "average": 4.5,
+     "count": 17
+   },
+   "createdAt": "2023-11-15T08:00:00Z",
+   "soldCount": 13,
+   "featured": true
+ },
+   {
+     "id": 64,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 22.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "red",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 65,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 44.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "red",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 66,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 9.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "red",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 67,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 35.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 68,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 77.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": true
+  },
+   {
+     "id": 69,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 31.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": false
+  },
+   {
+     "id": 70,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 14.55,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": false
+  },
+   {
+     "id": 71,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 22.69,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": false
+  },
+   {
+     "id": 72,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 22.89,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": false
+  },
+   {
+     "id": 73,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 212.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": false
+  },
+   {
+     "id": 75,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 16.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": false
+  },
+   {
+     "id": 76,
+    "name": "V-Neck Casual T-Shirt",
+    "price": 17.99,
+    "description": [
+      "Casual V-neck style",
+      "Regular fit",
+      "Soft and breathable",
+      "Available in multiple colors"
+    ],
+    "image": "product3",
+    "category": "mens",
+    "type": "Shirt",
+    "attributes": {
+      "size": ["M", "L", "XL"],
+      "color": "yellow",
+      "material": "Cotton Blend"
+    },
+    "availability": true,
+    "ratings": {
+      "average": 4.5,
+      "count": 17
+    },
+    "createdAt": "2023-11-15T08:00:00Z",
+    "soldCount": 13,
+    "featured": false
+  }
+  ]
+}

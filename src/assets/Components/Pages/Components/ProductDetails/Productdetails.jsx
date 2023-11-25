@@ -1,0 +1,157 @@
+import React, { useContext } from "react";
+import { useLocation, useParams } from "react-router-dom";
+import Layout from "../../../layout/Layout";
+import { Rate, Tag, Button } from "antd";
+import { CheckCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
+import { CartContext } from "../../../context/CartContext";
+
+export const getImagePath = (productName, category) => {
+  let imagePath = "";
+
+  switch (category) {
+    case "mens":
+      imagePath = `/src/assets/Components/Images/MensProduct/${productName}.jpg`;
+      break;
+    case "womens":
+      imagePath = `/src/assets/Components/Images/WomensProduct/${productName}.jpg`;
+      break;
+    case "velocity":
+      imagePath = `/src/assets/Components/Images/VelocityProduct/${productName}.jpg`;
+      break;
+    default:
+      // Handle default case if needed
+      break;
+  }
+
+  return imagePath;
+};
+const ProductDetails = () => {
+  const { addToCart } = useContext(CartContext);
+  const { productId } = useParams();
+  const location = useLocation();
+  const product = location.state.product;
+
+  const handleAddToCart = () => {
+    addToCart(product);
+  };
+
+  return (
+    <Layout>
+      <div className="container mx-auto px-4 py-8    ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className=" w-45 h-90">
+            <img
+              src={getImagePath(product.image, product.category)}
+              alt={product.name}
+              style={{ width: "auto", height: "80vh" }}
+            />
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold mb-4">{product.name}</h2>
+            <div className="mt-6 flex items-center">
+              <span className="font-semibold mr-4">Availability:</span>
+              {product.availability ? (
+                <Tag icon={<CheckCircleOutlined />} color="success">
+                  Available
+                </Tag>
+              ) : (
+                <Tag icon={<CloseCircleOutlined />} color="error">
+                  Out of Stock
+                </Tag>
+              )}
+            </div>
+            <div className="mt-4 flex items-center">
+              <span className="font-semibold mr-4">Ratings:</span>
+              <Rate
+                disabled
+                allowHalf
+                value={product.ratings.average}
+                style={{ fontSize: "1.5em" }} // Adjust size
+              />
+              <span className="ml-2 text-lg">
+                ({product.ratings.count}{" "}
+                {product.ratings.count === 1 ? "review" : "reviews"})
+              </span>
+            </div>
+            <p className="text-gray-600 my-4 flex items-center ">
+              <span className="font-semibold block mb-1">Price:</span>
+              <span className="font-semibold text-lg px-2">
+                ${product.price}
+              </span>
+            </p>
+            <div className="text-gray-600 mt-4">
+              <span className="font-semibold">Size:</span>
+              <div className="flex items-center mt-2 space-x-4">
+                {product.attributes.size.map((size, index) => (
+                  <label
+                    key={index}
+                    className="flex items-center justify-center border border-gray-300 rounded-md p-2 cursor-pointer hover:bg-gray-100"
+                  >
+                    <input
+                      type="radio"
+                      name="size"
+                      value={size}
+                      className="sr-only"
+                      onChange={() => handleSizeChange(size)} // handleSizeChange function to update selected size
+                    />
+                    <span className="text-sm font-medium">{size}</span>
+                  </label>
+                ))}
+              </div>
+              <Button
+                disabled={!product.availability}
+                onClick={handleAddToCart}
+                style={{
+                  textAlign: "center",
+
+                  backgroundColor: product.availability ? "#1890ff" : "#d9d9d9",
+                  color: product.availability ? "#fff" : "#555",
+                  border: "none",
+                  borderRadius: "4px",
+                  cursor: "pointer",
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                  outline: "none",
+                  marginTop: "10px",
+                  width: "160px",
+                }}
+              >
+                {product.availability ? "Add to Cart" : "Out of Stock"}
+              </Button>
+            </div>
+            <p className="text-gray-600 my-4 flex items-center ">
+              <span className="font-semibold block mb-1">Category:</span>
+              {"     "}
+              <span className="capitalize px-2">{product.category}</span>
+            </p>
+            <div className="text-gray-600 mb-6">
+              <span className="font-semibold block mb-2">Description:</span>
+              <ul className="list-disc list-inside">
+                {product.description.map((point, index) => (
+                  <li key={index} className="mb-1">
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="text-gray-600 mb-4">
+              <span className="font-semibold block mb-2">Attributes:</span>
+              <ul className="list-disc list-inside">
+                <li>
+                  <span className="font-semibold">Color:</span>{" "}
+                  {product.attributes.color}
+                </li>
+                <li>
+                  <span className="font-semibold">Material:</span>{" "}
+                  {product.attributes.material}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default ProductDetails;

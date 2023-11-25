@@ -1,13 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
-import { ShoppingCartOutlined, MenuOutlined, CloseOutlined } from "@mui/icons-material";
-import "./navbar.css"
+import {
+  AccountCircleOutlined,
+  ShoppingCartOutlined,
+  MenuOutlined,
+  CloseOutlined,
+} from "@mui/icons-material";
+import "./navbar.css";
+import Cart from "../Pages/cart/cart";
+import CartContext from "../context/CartContext";
 
 function Navbar() {
   const [activeCategory, setActiveCategory] = useState(null);
   const [menuOpen, setMenuOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [cartVisible, setCartVisible] = useState(false); // State for cart visibility
+
+  const { cartItems } = useContext(CartContext);
+
+  const toggleCart = () => {
+    setCartVisible(!cartVisible);
+    console.log("Cart Clicled");
+  };
 
   const handleMouseEnter = (category) => {
     setActiveCategory(category);
@@ -16,13 +30,12 @@ function Navbar() {
   const handleMouseLeave = () => {
     setTimeout(() => {
       setActiveCategory(null);
-    }, 1000);
+    }, 3000);
   };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
 
   useEffect(() => {
     const handleResize = () => {
@@ -54,7 +67,7 @@ function Navbar() {
             VougeNest
           </Link>
         </div>
-        {isMobile && menuOpen || (
+        {(isMobile && menuOpen) || (
           <div className="Navlinks">
             <div
               className="main-category"
@@ -68,11 +81,11 @@ function Navbar() {
                 <div className="submenu  ">
                   <li>
                     {" "}
-                    <Link to="/mens-shirts">Shirts</Link>
+                    <Link to="/mens/tops">Shirts</Link>
                   </li>
                   <li>
                     {" "}
-                    <Link to="/mens-pants">Pants</Link>
+                    <Link to="/mens/bottom">Pants</Link>
                   </li>
                 </div>
               )}
@@ -89,12 +102,11 @@ function Navbar() {
                 <div className="submenu ">
                   <li>
                     {" "}
-                    <Link to="/womens-dresses">Dresses</Link>
+                    <Link to="/womens/dresses">Dresses</Link>
                   </li>{" "}
                   <li>
-                    <Link to="/womens-shoes">Shoes</Link>
+                    <Link to="/womens/outerwear">OuterWear</Link>
                   </li>
-                  {/* Add more subcategory links as needed */}
                 </div>
               )}
             </div>
@@ -104,31 +116,32 @@ function Navbar() {
               onMouseLeave={handleMouseLeave}
             >
               <div className="nav-link">
-                <Link to="/kids">Kids</Link>
+                <Link to="/velocity">Velocity</Link>
               </div>
-              {activeCategory === "Kids" && (
-                <div className="submenu ">
-                  <li>
-                    <Link to="/kids-toys">Toys</Link>
-                  </li>
-                  <li>
-                    <Link to="/kids-clothing">Clothing</Link>
-                  </li>
-                </div>
-              )}
-            </div>
-            <div className="nav-link">
-              <Link to="/order">Order</Link>
             </div>
           </div>
-         )}
-
-        <div className="cartAccount icons" style={{ display: "flex" }}>
+        )}
+         <div className="nav-link-Account">
+          <Link to="/account"> < AccountCircleOutlined style={{fontSize :  "30px"}} /> </Link>
+         </div>
+        <div className="" >
           <div className="nav-link cart">
-            <Link to="/cart">
-              <ShoppingCartOutlined style={{ fontSize: 30, color: 'white' }} />
-            </Link>
+            {/* Toggle Cart visibility on click */}
+            <span
+              onClick={toggleCart}
+              className="cursor-pointer flex items-center"
+            >
+              <ShoppingCartOutlined style={{color : "white" , fontSize : "35px", position :"relative" , zIndex : "10"}} />
+
+              {/* Display number of items in cart */}
+              <span style={{top: "-10px"}} className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center  ">
+                {cartItems.length}
+              </span>
+            </span>
           </div>
+
+          {/* Render Cart component conditionally based on cart visibility */}
+          {cartVisible && <Cart />}
         </div>
       </div>
     </nav>
