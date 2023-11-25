@@ -1,29 +1,28 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { auth } from './firebase.config';
-import { createUserWithEmailAndPassword , 
-signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 const SignInForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleSignIn = (e) => {
+  async function handleSignIn(e) {
     e.preventDefault();
-    signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        // User signed in successfully
-        const user = userCredential.user;
-        console.log('User signed in:', user);
-      })
-      .catch((error) => {
-        // Handle errors
-        const errorMessage = error.message;
-        setError(errorMessage);
-        console.error('Error:', errorMessage);
-      });
-  };
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      console.log('User signed in:', user);
+
+    } catch (error) {
+      // Handle errors
+      const errorMessage = error.message;
+      setError(errorMessage);
+      console.error('Error:', errorMessage);
+    }
+  }
 
   return (
     <div>
