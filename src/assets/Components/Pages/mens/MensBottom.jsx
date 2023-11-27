@@ -1,4 +1,3 @@
-import React from 'react';
 import ProductGrid from '../Components/ProductGrid/ProductGrid';
 import menData from './men-data.json'; // Import your JSON data here
 import Layout from './../../layout/Layout';

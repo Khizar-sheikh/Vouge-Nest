@@ -1,8 +1,8 @@
-import React from "react";
 import Navbar from "./../navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { FloatButton } from "antd";
 import { CartProvider } from "../context/CartContext";
+import PropTypes from 'prop-types';
 
 function Layout({ children }) {
   return (
@@ -16,5 +16,7 @@ function Layout({ children }) {
     </div>
   );
 }
-
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 export default Layout;

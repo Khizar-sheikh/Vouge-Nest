@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const ProductGrid = ({ products, category, title }) => {
   const [sortBy, setSortBy] = useState("Featured");
@@ -29,11 +30,11 @@ const ProductGrid = ({ products, category, title }) => {
       case "High to Low":
         updatedSortedProducts.sort((a, b) => b.price - a.price);
         break;
-        case "Featured":
-          updatedSortedProducts.sort((a, b) => {
-            return a.featured === b.featured ? 0 : a.featured ? -1 : 1;
-          });
-          break;
+      case "Featured":
+        updatedSortedProducts.sort((a, b) => {
+          return a.featured === b.featured ? 0 : a.featured ? -1 : 1;
+        });
+        break;
       default:
         break;
     }
@@ -114,6 +115,11 @@ const ProductGrid = ({ products, category, title }) => {
       </div>
     </div>
   );
+};
+ProductGrid.propTypes = {
+  products: PropTypes.array,
+  title: PropTypes.node.isRequired,
+  category: PropTypes.node.isRequired,
 };
 
 export default ProductGrid;

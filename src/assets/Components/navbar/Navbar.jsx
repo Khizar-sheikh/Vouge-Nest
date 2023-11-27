@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import {
-  AccountCircleOutlined,
+  UserOutlined,
   ShoppingCartOutlined,
   MenuOutlined,
   CloseOutlined,
-} from "@mui/icons-material";
+} from "@ant-design/icons";
 import "./navbar.css";
 import Cart from "../Pages/cart/cart";
 import CartContext from "../context/CartContext";
@@ -20,7 +20,6 @@ function Navbar() {
 
   const toggleCart = () => {
     setCartVisible(!cartVisible);
-    console.log("Cart Clicled");
   };
 
   const handleMouseEnter = (category) => {
@@ -119,22 +118,40 @@ function Navbar() {
                 <Link to="/velocity">Velocity</Link>
               </div>
             </div>
+            <div>
+              <div className="nav-link">
+                <Link to="/order">Order</Link>
+              </div>
+            </div>
           </div>
         )}
-         <div className="nav-link-Account">
-          <Link to="/account"> < AccountCircleOutlined style={{fontSize :  "30px"}} /> </Link>
-         </div>
-        <div className="" >
+        <div className="nav-link-Account">
+          <Link to="/account">
+            {" "}
+            <UserOutlined style={{ fontSize: "30px" }} />{" "}
+          </Link>
+        </div>
+        <div className="">
           <div className="nav-link cart">
             {/* Toggle Cart visibility on click */}
             <span
               onClick={toggleCart}
               className="cursor-pointer flex items-center"
             >
-              <ShoppingCartOutlined style={{color : "white" , fontSize : "35px", position :"relative" , zIndex : "10"}} />
+              <ShoppingCartOutlined
+                style={{
+                  color: "white",
+                  fontSize: "35px",
+                  position: "relative",
+                  zIndex: "10",
+                }}
+              />
 
               {/* Display number of items in cart */}
-              <span style={{top: "-10px"}} className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center  ">
+              <span
+                style={{ top: "-10px" }}
+                className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center  "
+              >
                 {cartItems.length}
               </span>
             </span>

@@ -14,41 +14,45 @@ import About from "./assets/Components/Pages/About us/About";
 import MensTops from "./assets/Components/Pages/mens/MensTops";
 import MensBottom from "./assets/Components/Pages/mens/MensBottom";
 import WomensOuterwear from "./assets/Components/Pages/Womens/WomensBottom";
-import WomensDresses from './assets/Components/Pages/Womens/WomensTops';
+import WomensDresses from "./assets/Components/Pages/Womens/WomensTops";
 import NotFound from "./NotFound";
 import Productdetails from "./assets/Components/Pages/Components/ProductDetails/Productdetails";
 import { CartProvider } from "./assets/Components/context/CartContext";
-
+import PersonalInfo from "./assets/Components/Pages/checkout/PersonalInfo";
+import Checkout from "./assets/Components/Pages/checkout/Checkout";
+import Signuplayout from "./assets/Components/Authentication/signuplayout";
+import Signinlayout from "./assets/Components/Authentication/signinlayout";
 
 function App() {
   return (
     <div>
-      
-     <CartProvider>
-     <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/mens" element={<Mens />} />
-          <Route path="/mens/bottom" element={<MensBottom />} />
-          <Route path="/mens/tops" element={<MensTops />} />
-          <Route path="/womens" element={<Womens />} />
-          <Route path="/womens/dresses" element={<WomensDresses />} />
-          <Route path="/womens/outerwear" element={<WomensOuterwear />} />
-          <Route path="/velocity" element={<Velocity />} />
-          <Route path="/order" element={<Order />} />
-          <Route path="/cart" element={ <Cart/> }/>
-          <Route path="/account" element={<MyAccount />} />
-           <Route path="/contact" element={<Contact/>} />
-           <Route path="/jobs" element={<Job/>} />
-           <Route path="/about" element={<About/>} />
-          <Route path="/account" element={<MyAccount />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="/products/:productId" element={<Productdetails/>} />
-
-
-        </Routes>
-      </Router>
-     </CartProvider>
+      <CartProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/mens" element={<Mens />} />
+            <Route path="/mens/bottom" element={<MensBottom />} />
+            <Route path="/mens/tops" element={<MensTops />} />
+            <Route path="/womens" element={<Womens />} />
+            <Route path="/womens/dresses" element={<WomensDresses />} />
+            <Route path="/womens/outerwear" element={<WomensOuterwear />} />
+            <Route path="/velocity" element={<Velocity />} />
+            <Route path="/order" element={<Order />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/account" element={<MyAccount />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/jobs" element={<Job />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/account" element={<MyAccount />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/products/:productId" element={<Productdetails />} />
+            <Route path="/personal-info" element={<PersonalInfo />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/signin" element={<Signinlayout />} />
+            <Route path="/signup" element={<Signuplayout />} />
+          </Routes>
+        </Router>
+      </CartProvider>
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import Layout from "./../../layout/Layout";
 import Header from "./../../header/Header";
 import AboutUs from "./AboutContent";

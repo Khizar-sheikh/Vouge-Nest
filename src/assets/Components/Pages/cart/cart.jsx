@@ -1,34 +1,30 @@
 import { useState, useEffect, useRef, useContext } from "react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import { CloseOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
-import styled from "styled-components";
-import { getImagePath } from "./../Components/ProductDetails/Productdetails";
+import getImagePath from "./../Components/ProductDetails/Imagepath";
 
-const BrandName = styled.div`
-  font-size: var(--large-font);
-  font-weight: bolder;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: black;
-  text-shadow: -1px -1px 0 rgb(81, 78, 78), -2px -1px 0 rgb(121, 114, 114),
-    -3px -2px 0 rgb(40, 38, 38), 1px 1px 0 black;
+const brandNameStyles = {
+  fontSize: "var(--large-font)",
+  fontWeight: "bolder",
+  fontFamily:
+    'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
+  color: "black",
+  textShadow:
+    "-1px -1px 0 rgb(81, 78, 78), -2px -1px 0 rgb(121, 114, 114), -3px -2px 0 rgb(40, 38, 38), 1px 1px 0 black",
+  padding: "10px 20px",
+  marginBottom: "20px",
+};
 
-  padding: 10px 20px;
-  margin-bottom: 20px;
-
-  a {
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: bolder;
-  }
-`;
+const linkStyles = {
+  marginLeft: "20px",
+  textDecoration: "none",
+  fontWeight: "bolder",
+};
 
 export default function Cart() {
   const { cartItems, removeFromCart, updateItemQuantity } =
     useContext(CartContext);
-
-
 
   const [open, setOpen] = useState(true);
   const cartRef = useRef(null);
@@ -70,21 +66,24 @@ export default function Cart() {
                 className="p-2 text-gray-400 hover:text-gray-500"
                 onClick={() => setOpen(false)}
               >
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                <CloseOutlined />
               </button>
             </div>
             <div className="mt-8">
               {cartItems.length === 0 ? (
                 <div>
-                  <p className="text-gray-600 text-2xl  text-center py-12  ">
-                    <BrandName>
-                      <Link to="/"> VougeNest</Link>
-                    </BrandName>
+                  <div className="text-gray-600 text-2xl  text-center py-12  ">
+                    <div style={{ brandNameStyles }}>
+                      <Link style={{ linkStyles }} to="/">
+                        {" "}
+                        VougeNest
+                      </Link>
+                    </div>
                     There are no items in your cart.
-                  </p>
+                  </div>
                 </div>
               ) : (
-                <ul clasdiv sName="divide-y divide-gray-200">
+                <ul className="divide-y divide-gray-200">
                   {cartItems.map((product) => (
                     <li key={product.id} className="flex justify-around py-6">
                       {/* First Div: Image */}
@@ -161,33 +160,41 @@ export default function Cart() {
           </div>
 
           <div className="border-t border-gray-200 px-4 py-6 sm:px-6 sticky top-0 bg-white">
-            <div className="flex justify-between text-base font-medium text-gray-900">
-              <p>Subtotal</p>
-              <p>${totalPrice.toFixed(2)}</p>
-            </div>
-            <p className="mt-0.5 text-sm text-gray-500">
-              Shipping and taxes calculated at checkout.
-            </p>
-            <div className="mt-6">
-              <a
-                href="#"
-                className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-              >
-                Checkout
-              </a>
-            </div>
-            <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
-              <p>
-                or
-                <button
-                  type="button"
-                  className="font-medium text-indigo-600 hover:text-indigo-500"
-                  onClick={() => setOpen(false)}
-                >
-                  <Link to="/"> Continue Shopping</Link> &rarr;
-                </button>
-              </p>
-            </div>
+            {cartItems.length === 0 ? (
+              <div></div>
+            ) : (
+              <div>
+                <div className="flex justify-between text-base font-medium text-gray-900">
+                  <p>Subtotal</p>
+                  <p>${totalPrice.toFixed(2)}</p>
+                </div>
+                <p className="mt-0.5 text-sm text-gray-500">
+                  Shipping and taxes calculated at checkout.
+                </p>
+                <div className="mt-6">
+                  <div
+                    href="#"
+                    className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                  >
+                    <Link to={{ pathname: "/checkout", state: { cartItems } }}>
+                      Go to Checkout Page
+                    </Link>
+                  </div>
+                </div>
+                <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+                  <p>
+                    or{" "}
+                    <button
+                      type="button"
+                      className="font-medium text-indigo-600 hover:text-indigo-500"
+                      onClick={() => setOpen(false)}
+                    >
+                      <Link to="/">Continue Shopping</Link> &rarr;
+                    </button>
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

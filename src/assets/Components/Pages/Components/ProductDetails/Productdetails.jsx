@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useContext } from "react";
+import { useLocation } from "react-router-dom";
 import Layout from "../../../layout/Layout";
 import { Rate, Tag, Button } from "antd";
 import { CheckCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
 import { CartContext } from "../../../context/CartContext";
 
-export const getImagePath = (productName, category) => {
+const getImagePath = (productName, category) => {
   let imagePath = "";
 
   switch (category) {
@@ -27,7 +27,6 @@ export const getImagePath = (productName, category) => {
 };
 const ProductDetails = () => {
   const { addToCart } = useContext(CartContext);
-  const { productId } = useParams();
   const location = useLocation();
   const product = location.state.product;
 
@@ -92,7 +91,6 @@ const ProductDetails = () => {
                       name="size"
                       value={size}
                       className="sr-only"
-                      onChange={() => handleSizeChange(size)} // handleSizeChange function to update selected size
                     />
                     <span className="text-sm font-medium">{size}</span>
                   </label>

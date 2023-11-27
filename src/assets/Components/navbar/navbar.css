@@ -115,7 +115,7 @@ nav {
   color: #c82a2a;
 }
 .responsive-navbar {
-  padding: 0px 0 3px 0;
+  padding: 0px 0 1rem 0;
 }
 .responsive-navbar .Navlinks {
   display: flex;

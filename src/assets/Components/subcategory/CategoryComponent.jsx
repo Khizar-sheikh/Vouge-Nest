@@ -1,61 +1,61 @@
-// CategoryComponent.js
-import React from 'react';
-import styled from 'styled-components';
+import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
-const CategoryContainer = styled.div`
-  width: 100%;
-  height: 110vh;
-  background-size: cover; /* Ensure the background image covers the entire container */
-  background-position: center; /* Adjust the position based on your preference */
-  background-repeat: no-repeat;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  margin-top : 15px;
+const CategoryComponent = ({ category, horizontalimage, verticalimage }) => {
+  const [isHorizontal, setIsHorizontal] = useState(false);
 
-  h2 {
-    color: #fff;
-  }
+  useEffect(() => {
+    const handleResize = () => {
+      setIsHorizontal(window.innerWidth >= 768);
+    };
 
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  }
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
-  @media (min-width: 768px) {
-    background-image: url(${(props) => props.horizontalImage});
-  }
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
-  @media (max-width: 767px) {
-    background-image: url(${(props) => props.verticalImage});
-  }
-`;
+  const containerStyle = {
+    width: "100%",
+    height: "110vh",
+    backgroundImage: isHorizontal
+      ? `url(${horizontalimage})`
+      : `url(${verticalimage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    position: "relative",
+    overflow: "hidden",
+    cursor: "pointer",
+    marginTop: "15px",
+  };
 
-const ContentWrapper = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width : 100vw;
-`;
+  const contentWrapperStyle = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    textAlign: "center",
+    width: "100vw",
+  };
 
-const CategoryComponent = ({ category, horizontalImage, verticalImage, shopNowLink }) => {
   return (
-    <CategoryContainer
-     horizontalImage={horizontalImage} 
-     verticalImage={verticalImage}>
-      <ContentWrapper>
-        <h2 className='text-3xl md:text-6xl lg:text-5xl text-gray-100 font-bold'>{category}</h2>
-      </ContentWrapper>
-    </CategoryContainer>
+    <div style={containerStyle}>
+      <div style={contentWrapperStyle}>
+        <h2 className="text-3xl md:text-6xl lg:text-5xl text-gray-100 font-bold">
+          {category}
+        </h2>
+      </div>
+    </div>
   );
+};
+
+CategoryComponent.propTypes = {
+  category: PropTypes.node.isRequired,
+  horizontalimage: PropTypes.string,
+  verticalimage: PropTypes.string,
 };
 
 export default CategoryComponent;

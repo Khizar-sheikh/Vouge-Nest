@@ -1,4 +1,3 @@
-import React from 'react';
 import menData from './men-data.json'; // Import your JSON data here
 import Layout from './../../layout/Layout';
 // import ProductContainer from '../Components/ProductGrid/ProductContainer';
