@@ -59,7 +59,7 @@ export const CartProvider = ({ children }) => {
     setCartItems(updatedCart);
   };
   const orderComplete = () => {
-    setCompletedOrder(cartItems);
+    setCompletedOrder([...cartItems]);
     setCartItems([]);
   };
 
