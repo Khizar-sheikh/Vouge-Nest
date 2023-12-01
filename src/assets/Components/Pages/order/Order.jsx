@@ -5,7 +5,7 @@ import { CartContext } from "./../../context/CartContext";
 import getImagePath from "../Components/ProductDetails/Imagepath";
 
 function Order() {
-  const { cartItems } = useContext(CartContext);
+  const { completedOrder } = useContext(CartContext);
   const [orderNumber, setOrderNumber] = useState(null); // State for order number
 
   useEffect(() => {
@@ -20,7 +20,7 @@ function Order() {
     return `${randomOrderNumber}`; // Return a formatted order number
   };
 
-  const totalPrice = cartItems.reduce(
+  const totalPrice = completedOrder.reduce(
     (total, product) => total + product.price * product.quantity,
     0
   );
@@ -36,7 +36,7 @@ function Order() {
               Order {orderNumber}{" "}
             </h3>
             <ul className="divide-y divide-gray-200 max-h-60 overflow-y-auto">
-              {cartItems.map((product, index) => (
+              {completedOrder.map((product, index) => (
                 <li key={index} className="flex items-center py-6 space-x-4">
                   {/* Image */}
                   <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">

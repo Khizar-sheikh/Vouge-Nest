@@ -22,6 +22,7 @@ import Checkout from "./assets/Components/Pages/checkout/Checkout";
 import Signuplayout from "./assets/Components/Authentication/signuplayout";
 import Signinlayout from "./assets/Components/Authentication/signinlayout";
 import OrderConfirmation from "./assets/Components/Pages/OrderConfirm/OrderConfirmation";
+import Order from "./assets/Components/Pages/order/Order";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/order-confirm" element={<OrderConfirmation />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/order" element={<Order />} />
             <Route path="/account" element={<MyAccount />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/jobs" element={<Job />} />

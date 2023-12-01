@@ -1,10 +1,11 @@
-import  { useState, createContext, useEffect } from "react";
-import PropTypes from 'prop-types';
+import { useState, createContext, useEffect } from "react";
+import PropTypes from "prop-types";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const [completedOrder, setCompletedOrder] = useState(null);
 
   useEffect(() => {
     const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
@@ -37,14 +38,14 @@ export const CartProvider = ({ children }) => {
 
   const updateItemQuantity = (itemId, newQuantity) => {
     newQuantity = Math.max(newQuantity, 1);
-  
+
     const updatedCart = cartItems.map((item) => {
       if (item.id === itemId) {
         return { ...item, quantity: newQuantity };
       }
       return item;
     });
-  
+
     setCartItems(updatedCart);
   };
 
@@ -57,13 +58,19 @@ export const CartProvider = ({ children }) => {
     });
     setCartItems(updatedCart);
   };
+  const orderComplete = () => {
+    setCompletedOrder(cartItems);
+    setCartItems([]);
+  };
 
   const cartContextValue = {
     cartItems,
+    orderComplete,
     addToCart,
     removeFromCart,
     updateItemQuantity,
     updateItemSize,
+    completedOrder,
   };
 
   return (
