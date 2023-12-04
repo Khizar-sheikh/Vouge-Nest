@@ -5,7 +5,7 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
-  const [completedOrder, setCompletedOrder] = useState(null);
+  const [completedOrder, setCompletedOrder] = useState([]);
 
   useEffect(() => {
     const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
@@ -59,10 +59,17 @@ export const CartProvider = ({ children }) => {
     setCartItems(updatedCart);
   };
   const orderComplete = () => {
-    setCompletedOrder([...cartItems]);
-    setCartItems([]);
-  };
+    // Create a copy of the current cart items to add to completed orders
+    const currentCartItems = [...cartItems];
 
+    // Add current cartItems to completedOrders array
+    setCompletedOrder((prevCompletedOrder) => [
+      ...prevCompletedOrder,
+      ...currentCartItems,
+    ]);
+
+    setCartItems([]); // Clear cartItems after completing the order
+  };
   const cartContextValue = {
     cartItems,
     orderComplete,

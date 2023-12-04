@@ -118,11 +118,11 @@ function Navbar() {
                 <Link to="/velocity">Velocity</Link>
               </div>
             </div>
-            <div>
+            {/* <div>
               <div className="nav-link">
                 <Link to="/order">Order</Link>
               </div>
-            </div>
+            </div> */}
           </div>
         )}
         <div className="nav-link-Account">

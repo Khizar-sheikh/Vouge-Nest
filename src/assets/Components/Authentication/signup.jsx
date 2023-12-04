@@ -33,8 +33,7 @@ function SignUpForm() {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log("User signed up:", user);
-        setSignedUp(true); // Update sign-up success state
+        setSignedUp(true);
       })
       .catch((error) => {
         const errorMessage = error.message;
