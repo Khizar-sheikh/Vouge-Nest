@@ -10,7 +10,7 @@ import womensouterwearH from "../../Images/categoryimages/womens-horizontal.jpg"
 import womensouterwearV from "../../Images/categoryimages/womens-vertical.jpg";
 import DressVertical from "../../Images/categoryimages/WomesDress-Vertical.jpg";
 import DressHorizontal from "../../Images/categoryimages/womensDress-horizontal.jpg";
-import VelocityH from "../../Images/categoryimages/velocityH.jpg";
+import VelocityH from "../../Images/categoryimages/VelocityH.jpg";
 import VelocityV from "../../Images/categoryimages/velocityV.jpg";
 import { Link } from "react-router-dom";
 import CategoryComponent from "./../../subcategory/CategoryComponent";
