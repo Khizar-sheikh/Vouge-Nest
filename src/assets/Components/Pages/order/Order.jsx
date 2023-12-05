@@ -45,56 +45,55 @@ function Order() {
           </div>
         </div>
       ) : (
-        <div className="flex justify-center">
-          <div className="container sticky p-3  lg:flex bg-gray-200 justify-around mb-3">
-            <div>
-              <ul className="divide-y divide-gray-200 max-h-60 overflow-y-auto">
-                {completedOrder.map((product, index) => (
-                  <li key={index} className="flex items-center py-6 space-x-4">
-                    {/* Image */}
-                    <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                      <img
-                        src={getImagePath(product.image, product.category)}
-                        alt={product.name}
-                        className="h-full w-full object-contain object-center"
-                      />
-                    </div>
-                    {/* Product Details */}
-                    <div className="flex-1 flex flex-col">
-                      <h3 className="text-lg font-semibold">{product.name}</h3>
+        <div className="container mx-auto px-4">
+          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+            {completedOrder.map((product, index) => (
+              <div key={index} className="bg-gray-200 rounded-lg p-4 mb-8">
+                <h3 className="text-xl font-bold mb-4">Order {index + 1}</h3>
+
+                <div
+                  key={index}
+                  className="flex items-center space-x-4 border-b border-gray-300 pb-4 mb-4"
+                >
+                  <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                    <img
+                      src={getImagePath(product.image, product.category)}
+                      alt={product.name}
+                      className="h-full w-full object-contain object-center"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-lg font-semibold">{product.name}</h4>
+                    <p className="text-sm text-gray-600">
+                      {product.attributes.color}
+                    </p>
+                    <div className="flex items-center mt-2">
                       <p className="text-sm text-gray-600">
-                        {product.attributes.color}
+                        Qty {product.quantity}
                       </p>
-                      <div className="flex items-center mt-2">
-                        <p className="text-sm text-gray-600">
-                          Qty {product.quantity}
-                        </p>
-                        <p className="ml-4">${product.price}</p>
-                      </div>
+                      <p className="ml-4">${product.price}</p>
                     </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* Order Summary */}
-            <div className="mt-8">
-              <div className="border-t border-gray-300 pt-6">
-                <h4 className="text-xl font-semibold">Order Summary</h4>
-                <div className="flex justify-between mt-4">
-                  <p>Subtotal:</p>
-                  <p>${totalPrice.toFixed(2)}</p>
-                </div>
-                <div className="flex justify-between mt-2">
-                  <p>Standard Delivery:</p>
-                  <p>${DeliveryCharges}</p>
-                </div>
-                <div className="flex justify-between mt-2">
-                  <p className="font-semibold">Total:</p>
-                  <p className="font-semibold">
-                    ${totalPriceWithDelivery.toFixed(2)}
-                  </p>
+                  </div>
                 </div>
               </div>
+            ))}
+          </div>
+          {/* Display Order Summary after all orders */}
+          <div className="mt-8 bg-gray-200 rounded-lg p-4">
+            <h3 className="text-xl font-bold mb-4">Order Summary</h3>
+            <div className="flex justify-between mt-4">
+              <p>Subtotal:</p>
+              <p>${totalPrice.toFixed(2)}</p>
+            </div>
+            <div className="flex justify-between mt-2">
+              <p>Standard Delivery:</p>
+              <p>${DeliveryCharges * completedOrder.length}</p>
+            </div>
+            <div className="flex justify-between mt-2">
+              <p className="font-semibold">Total for all orders:</p>
+              <p className="font-semibold">
+                ${totalPriceWithDelivery.toFixed(2)}
+              </p>
             </div>
           </div>
         </div>
