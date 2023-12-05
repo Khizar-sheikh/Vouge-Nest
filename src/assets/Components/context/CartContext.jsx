@@ -10,12 +10,11 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     setCartItems(storedCartItems);
-  }, []); // This fetches items from local storage only once when component mounts
+  }, []); // This fetches items from local storage only once when component mount
 
-  useEffect(() => {
-    // This effect listens for changes in cartItems and updates local storage
+  function updateLocalCart() {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  }, [cartItems]); // Whenever cartItems change, update local storage
+  }
 
   const addToCart = (item) => {
     const existingProductIndex = cartItems.findIndex(
@@ -29,11 +28,14 @@ export const CartProvider = ({ children }) => {
     } else {
       setCartItems([...cartItems, { ...item, quantity: 1 }]);
     }
+
+    updateLocalCart();
   };
 
   const removeFromCart = (itemId) => {
     const updatedCart = cartItems.filter((item) => item.id !== itemId);
     setCartItems(updatedCart);
+    updateLocalCart();
   };
 
   const updateItemQuantity = (itemId, newQuantity) => {
@@ -47,6 +49,7 @@ export const CartProvider = ({ children }) => {
     });
 
     setCartItems(updatedCart);
+    updateLocalCart();
   };
 
   const updateItemSize = (itemId, newSize) => {
@@ -57,6 +60,7 @@ export const CartProvider = ({ children }) => {
       return item;
     });
     setCartItems(updatedCart);
+    updateLocalCart();
   };
   const orderComplete = () => {
     // Create a copy of the current cart items to add to completed orders
@@ -69,6 +73,7 @@ export const CartProvider = ({ children }) => {
     ]);
 
     setCartItems([]); // Clear cartItems after completing the order
+    updateLocalCart();
   };
   const cartContextValue = {
     cartItems,
