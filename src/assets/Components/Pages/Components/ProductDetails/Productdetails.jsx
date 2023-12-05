@@ -4,27 +4,8 @@ import Layout from "../../../layout/Layout";
 import { Rate, Tag, Button } from "antd";
 import { CheckCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
 import { CartContext } from "../../../context/CartContext";
+import getImagePath from "./Imagepath";
 
-const getImagePath = (productName, category) => {
-  let imagePath = "";
-
-  switch (category) {
-    case "mens":
-      imagePath = `/src/assets/Components/Images/MensProduct/${productName}.jpg`;
-      break;
-    case "womens":
-      imagePath = `/src/assets/Components/Images/WomensProduct/${productName}.jpg`;
-      break;
-    case "velocity":
-      imagePath = `/src/assets/Components/Images/VelocityProduct/${productName}.jpg`;
-      break;
-    default:
-      // Handle default case if needed
-      break;
-  }
-
-  return imagePath;
-};
 const ProductDetails = () => {
   const { addToCart } = useContext(CartContext);
   const location = useLocation();

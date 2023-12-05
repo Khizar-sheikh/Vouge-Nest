@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import getImagePath from "../ProductDetails/Imagepath";
 
-const ProductGrid = ({ products, category, title }) => {
+const ProductGrid = ({ products, title }) => {
   const [sortBy, setSortBy] = useState("Featured");
   const [sortedProducts, setSortedProducts] = useState([]);
 
@@ -43,18 +44,6 @@ const ProductGrid = ({ products, category, title }) => {
     console.log(updatedSortedProducts);
   };
 
-  const getImagePath = (productName) => {
-    // Modify this logic to match your category and product names
-    if (category === "mens") {
-      return `/src/assets/Components/Images/MensProduct/${productName}.jpg`;
-    } else if (category === "womens") {
-      return `/src/assets/Components/Images/WomensProduct/${productName}.jpg`;
-    } else if (category === "velocity") {
-      return `/src/assets/Components/Images/VelocityProduct/${productName}.jpg`;
-    }
-    return "";
-  };
-
   return (
     <div>
       <div className=" flex flex-col lg:flex-row md:flex-row justify-around items-center mt-3  ">
@@ -93,7 +82,7 @@ const ProductGrid = ({ products, category, title }) => {
               <div className=" h-60 w-auto">
                 <img
                   // src={product1}
-                  src={getImagePath(product.image)}
+                  src={getImagePath(product.image, product.category)}
                   alt={product.name}
                   className="h-full"
                 />
