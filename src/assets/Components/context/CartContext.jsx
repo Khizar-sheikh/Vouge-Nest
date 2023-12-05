@@ -12,30 +12,31 @@ export const CartProvider = ({ children }) => {
     setCartItems(storedCartItems);
   }, []); // This fetches items from local storage only once when component mount
 
-  function updateLocalCart() {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  function updateLocalCart(carts) {
+    localStorage.setItem("cartItems", JSON.stringify(carts));
   }
 
   const addToCart = (item) => {
     const existingProductIndex = cartItems.findIndex(
       (product) => product.id === item.id
     );
+    let updatedCart;
 
     if (existingProductIndex !== -1) {
-      const updatedCart = [...cartItems];
+      updatedCart = [...cartItems];
       updatedCart[existingProductIndex].quantity += 1;
-      setCartItems(updatedCart);
     } else {
-      setCartItems([...cartItems, { ...item, quantity: 1 }]);
+      updatedCart = [...cartItems, { ...item, quantity: 1 }];
     }
-
-    updateLocalCart();
+    console.log(cartItems);
+    setCartItems(updatedCart);
+    updateLocalCart(updatedCart);
   };
 
   const removeFromCart = (itemId) => {
     const updatedCart = cartItems.filter((item) => item.id !== itemId);
     setCartItems(updatedCart);
-    updateLocalCart();
+    updateLocalCart(updatedCart);
   };
 
   const updateItemQuantity = (itemId, newQuantity) => {
@@ -49,7 +50,7 @@ export const CartProvider = ({ children }) => {
     });
 
     setCartItems(updatedCart);
-    updateLocalCart();
+    updateLocalCart(updatedCart);
   };
 
   const updateItemSize = (itemId, newSize) => {
@@ -60,7 +61,7 @@ export const CartProvider = ({ children }) => {
       return item;
     });
     setCartItems(updatedCart);
-    updateLocalCart();
+    updateLocalCart(updatedCart);
   };
   const orderComplete = () => {
     // Create a copy of the current cart items to add to completed orders
@@ -73,7 +74,7 @@ export const CartProvider = ({ children }) => {
     ]);
 
     setCartItems([]); // Clear cartItems after completing the order
-    updateLocalCart();
+    updateLocalCart([]);
   };
   const cartContextValue = {
     cartItems,
