@@ -3,13 +3,13 @@ const getImagePath = (productName, category) => {
 
   switch (category) {
     case "mens":
-      imagePath = `/src/assets/Components/Images/MensProduct/${productName}.jpg`;
+      imagePath = `./assets/Components/Images/MensProduct/${productName}.jpg`;
       break;
     case "womens":
-      imagePath = `/src/assets/Components/Images/WomensProduct/${productName}.jpg`;
+      imagePath = `./assets/Components/Images/WomensProduct/${productName}.jpg`;
       break;
     case "velocity":
-      imagePath = `/src/assets/Components/Images/VelocityProduct/${productName}.jpg`;
+      imagePath = `./assets/Components/Images/VelocityProduct/${productName}.jpg`;
       break;
     default:
       // Handle default case if needed

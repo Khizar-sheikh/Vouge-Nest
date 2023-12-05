@@ -334,7 +334,12 @@ function Checkout() {
                     className="border border-gray-300 rounded-lg p-2 w-full focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   />
                 </div>
-                <button onClick={handle_complete_Order}>Complete Order</button>
+                <button
+                  className="btn btn-success"
+                  onClick={handle_complete_Order}
+                >
+                  Complete Order
+                </button>
               </div>
             </div>
           </div>
