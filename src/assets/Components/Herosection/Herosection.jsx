@@ -10,7 +10,7 @@ import hero4 from "../Images/hero4-min.jpg";
 import hero45 from "../Images/hero45-min.jpg";
 
 const images = [
-  { url: hero2, link: "/mens-casual" },
+  { url: hero2, link: "/mens" },
   { url: hero, link: "/mens" },
   { url: hero4, link: "/womens" },
   { url: hero5, link: "/kids" },
@@ -53,6 +53,9 @@ const Herosection = () => {
     >
       {loading ? (
         <div className="skeleton flex justify-center">
+          <div className=" my-8 ">
+            <Skeleton variant="rectangular" />
+          </div>
           <Skeleton.Image active style={{ width: "95vw", height: "95vh" }} />
         </div>
       ) : (
