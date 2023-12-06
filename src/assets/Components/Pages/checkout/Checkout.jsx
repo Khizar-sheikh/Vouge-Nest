@@ -82,10 +82,18 @@ function Checkout() {
         </div>
         <div className="order-2 lg:order-last">
           <div>
-            <div className="grid grid-cols-1 mt-5 gap-y-6 m-8">
-              <h2 className="text-xl font-bold">Payment</h2>
+            <div className="grid grid-cols-1 gap-y-6 m-8">
+              <h2 className="text-xl font-bold">Personal Information</h2>
               <Formik
                 initialValues={{
+                  firstName: "",
+                  lastName: "",
+                  email: "",
+                  streetAddress: "",
+                  city: "",
+                  country: "",
+                  region: "",
+                  postalCode: "",
                   "payment-type": "",
                   "card-number": "",
                   "name-on-card": "",
@@ -93,9 +101,81 @@ function Checkout() {
                   cvc: "",
                 }}
                 onSubmit={handle_complete_Order}
+                validate={(values) => {
+                  const errors = {};
+
+                  if (!values.firstName) {
+                    errors.firstName = "First name is required";
+                  }
+                  if (!values.lastName) {
+                    errors.lastName = "Last name is required";
+                  }
+                  if (!values.email) {
+                    errors.email = "Email is required";
+                  } else if (!/^\S+@\S+\.\S+$/.test(values.email)) {
+                    errors.email = "Invalid email address";
+                  }
+                  if (!values.streetAddress) {
+                    errors.streetAddress = "Street address is required";
+                  }
+                  if (!values.city) {
+                    errors.city = "City is required";
+                  }
+                  if (!values.country) {
+                    errors.country = "Country is required";
+                  }
+                  if (!values.region) {
+                    errors.region = "State / Province is required";
+                  }
+                  if (!values.postalCode) {
+                    errors.postalCode = "ZIP / Postal code is required";
+                  }
+
+                  if (!values["payment-type"]) {
+                    errors["payment-type"] = "Payment type is required";
+                  }
+                  if (!values["card-number"]) {
+                    errors["card-number"] = "Card number is required";
+                  }
+                  if (!values["name-on-card"]) {
+                    errors["name-on-card"] = "Name on card is required";
+                  }
+                  if (!values["expiration-date"]) {
+                    errors["expiration-date"] = "Expiration date is required";
+                  }
+                  if (!values["cvc"]) {
+                    errors["cvc"] = "CVC is required";
+                  }
+                  return errors;
+                }}
               >
                 {({ isSubmitting }) => (
                   <Form className="space-y-6">
+                    <div className="grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-6">
+                      <div className="sm:col-span-3">
+                        <label
+                          htmlFor="firstName"
+                          className="block text-sm font-medium leading-6 text-gray-900"
+                        >
+                          First name
+                        </label>
+                        <Field
+                          type="text"
+                          name="firstName"
+                          id="firstName"
+                          className="block px-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        />
+                        <ErrorMessage
+                          name="firstName"
+                          component="div"
+                          className="text-red-500 text-sm"
+                        />
+                      </div>
+                      {/* Add other personal information fields similarly */}
+                    </div>
+
+                    {/* Payment Information Section */}
+                    <h2 className="text-xl font-bold">Payment</h2>
                     <fieldset className="border border-gray-300 rounded-lg p-4">
                       <legend className="font-bold">Payment type</legend>
                       <div className="space-y-2">
@@ -116,28 +196,29 @@ function Checkout() {
                         </div>
                         <div className="flex items-center space-x-2">
                           <Field
-                            id="paypal"
+                            id="credit-card"
                             name="payment-type"
                             type="radio"
-                            value="paypal"
+                            value="credit-card"
                             className="form-radio rounded-full text-indigo-600 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                           />
-                          <label htmlFor="paypal" className="text-gray-700">
-                            PayPal
+                          <label htmlFor="Debit-card" className="text-gray-700">
+                            Debit card
                           </label>
                         </div>
                         <div className="flex items-center space-x-2">
                           <Field
-                            id="etransfer"
+                            id="Visa-card"
                             name="payment-type"
                             type="radio"
-                            value="etransfer"
+                            value="Visa-card"
                             className="form-radio rounded-full text-indigo-600 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                           />
-                          <label htmlFor="etransfer" className="text-gray-700">
-                            eTransfer
+                          <label htmlFor="Visa-card" className="text-gray-700">
+                            Visa card
                           </label>
                         </div>
+                        {/* Add other payment type radio inputs similarly */}
                         <ErrorMessage
                           name="payment-type"
                           component="div"
@@ -145,7 +226,6 @@ function Checkout() {
                         />
                       </div>
                     </fieldset>
-
                     <div className="space-y-4">
                       <div>
                         <label
@@ -167,66 +247,7 @@ function Checkout() {
                           className="text-red-500 text-sm"
                         />
                       </div>
-                      <div>
-                        <label
-                          htmlFor="name-on-card"
-                          className="font-bold text-gray-700"
-                        >
-                          Name on card
-                        </label>
-                        <Field
-                          type="text"
-                          id="name-on-card"
-                          name="name-on-card"
-                          autoComplete="cc-name"
-                          className="border border-gray-300 rounded-lg p-2 w-full focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                        />
-                        <ErrorMessage
-                          name="name-on-card"
-                          component="div"
-                          className="text-red-500 text-sm"
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="expiration-date"
-                          className="font-bold text-gray-700"
-                        >
-                          Expiration date (MM/YY)
-                        </label>
-                        <Field
-                          type="text"
-                          name="expiration-date"
-                          id="expiration-date"
-                          autoComplete="cc-exp"
-                          className="border border-gray-300 rounded-lg p-2 w-full focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                        />
-                        <ErrorMessage
-                          name="expiration-date"
-                          component="div"
-                          className="text-red-500 text-sm"
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="cvc"
-                          className="font-bold text-gray-700"
-                        >
-                          CVC
-                        </label>
-                        <Field
-                          type="text"
-                          name="cvc"
-                          id="cvc"
-                          autoComplete="csc"
-                          className="border border-gray-300 rounded-lg p-2 w-full focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                        />
-                        <ErrorMessage
-                          name="cvc"
-                          component="div"
-                          className="text-red-500 text-sm"
-                        />
-                      </div>
+
                       <button
                         type="submit"
                         className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
