@@ -3,6 +3,8 @@ import { CartContext } from "../../context/CartContext";
 import getImagePath from "../Components/ProductDetails/Imagepath";
 import Footer from "./../../Footer/Footer";
 import { useNavigate } from "react-router-dom";
+import PersonalInfo from "./PersonalInfo";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 
 function Checkout() {
   const { cartItems, orderComplete, completedOrder } = useContext(CartContext);
@@ -24,163 +26,7 @@ function Checkout() {
     <div>
       <div className="lg:grid flex flex-col lg:grid-cols-2 md:grid md:grid-cols-2 items-center  justify-center ">
         <div className="order-1">
-          <div className="border-b border-gray-900/10 pb-12 p-9 ">
-            <h2 className="text-base font-semibold leading-7 text-gray-900">
-              Personal Information
-            </h2>
-            <p className="mt-1 text-sm leading-6 text-gray-600">
-              Use a permanent address where you can receive mail.
-            </p>
-
-            <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-6">
-              <div className="sm:col-span-3">
-                <label
-                  htmlFor="first-name"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  First name
-                </label>
-                <div className="mt-2">
-                  <input
-                    type="text"
-                    name="first-name"
-                    id="first-name"
-                    autoComplete="given-name"
-                    className="block px-4  w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-
-              <div className="sm:col-span-3">
-                <label
-                  htmlFor="last-name"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Last name
-                </label>
-                <div className="mt-2">
-                  <input
-                    type="text"
-                    name="last-name"
-                    id="last-name"
-                    autoComplete="family-name"
-                    className="block  px-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-
-              <div className="sm:col-span-4">
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Email address
-                </label>
-                <div className="mt-2">
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    className="block px-4  w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-
-              <div className="sm:col-span-3">
-                <label
-                  htmlFor="country"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Country
-                </label>
-                <div className="mt-2">
-                  <select
-                    id="country"
-                    name="country"
-                    autoComplete="country-name"
-                    className="block w-full px-4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                  >
-                    <option>United States</option>
-                    <option>Canada</option>
-                    <option>Mexico</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="col-span-full">
-                <label
-                  htmlFor="street-address"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Street address
-                </label>
-                <div className="mt-2">
-                  <input
-                    type="text"
-                    name="street-address"
-                    id="street-address"
-                    autoComplete="street-address"
-                    className="block px-4  w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-
-              <div className="sm:col-span-2 sm:col-start-1">
-                <label
-                  htmlFor="city"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  City
-                </label>
-                <div className="mt-2">
-                  <input
-                    type="text"
-                    name="city"
-                    id="city"
-                    autoComplete="address-level2"
-                    className="block px-4  w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="region"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  State / Province
-                </label>
-                <div className="mt-2">
-                  <input
-                    type="text"
-                    name="region"
-                    id="region"
-                    autoComplete="address-level1"
-                    className="block px-4  w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="postal-code"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  ZIP / Postal code
-                </label>
-                <div className="mt-2">
-                  <input
-                    type="text"
-                    name="postal-code"
-                    id="postal-code"
-                    autoComplete="postal-code"
-                    className="block px-4  w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+          <PersonalInfo />
         </div>
         <div className="order-last lg:order-2 self-center ">
           <div className="container sticky   m-3 p-4  w-5/6 bg-gray-200">
@@ -238,109 +84,161 @@ function Checkout() {
           <div>
             <div className="grid grid-cols-1 mt-5 gap-y-6 m-8">
               <h2 className="text-xl font-bold">Payment</h2>
-              <fieldset className="border border-gray-300 rounded-lg p-4">
-                <legend className="font-bold">Payment type</legend>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <input
-                      id="credit-card"
-                      name="payment-type"
-                      type="radio"
-                      className="form-radio rounded-full text-indigo-600 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                    />
-                    <label htmlFor="credit-card" className="text-gray-700">
-                      Credit card
-                    </label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input
-                      id="paypal"
-                      name="payment-type"
-                      type="radio"
-                      className="form-radio rounded-full text-indigo-600 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                    />
-                    <label htmlFor="paypal" className="text-gray-700">
-                      PayPal
-                    </label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input
-                      id="etransfer"
-                      name="payment-type"
-                      type="radio"
-                      className="form-radio rounded-full text-indigo-600 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                    />
-                    <label htmlFor="etransfer" className="text-gray-700">
-                      eTransfer
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-              <div className="space-y-4">
-                <div>
-                  <label
-                    htmlFor="card-number"
-                    className="font-bold text-gray-700"
-                  >
-                    Card number
-                  </label>
-                  <input
-                    type="text"
-                    id="card-number"
-                    name="card-number"
-                    autoComplete="cc-number"
-                    className="border border-gray-300 rounded-lg p-2 w-full focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="name-on-card"
-                    className="font-bold text-gray-700"
-                  >
-                    Name on card
-                  </label>
-                  <input
-                    type="text"
-                    id="name-on-card"
-                    name="name-on-card"
-                    autoComplete="cc-name"
-                    className="border border-gray-300 rounded-lg p-2 w-full focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="expiration-date"
-                    className="font-bold text-gray-700"
-                  >
-                    Expiration date (MM/YY)
-                  </label>
-                  <input
-                    type="text"
-                    name="expiration-date"
-                    id="expiration-date"
-                    autoComplete="cc-exp"
-                    className="border border-gray-300 rounded-lg p-2 w-full focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="cvc" className="font-bold text-gray-700">
-                    CVC
-                  </label>
-                  <input
-                    type="text"
-                    name="cvc"
-                    id="cvc"
-                    autoComplete="csc"
-                    className="border border-gray-300 rounded-lg p-2 w-full focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                  />
-                </div>
-                <button
-                  className="btn btn-success"
-                  onClick={handle_complete_Order}
-                >
-                  Complete Order
-                </button>
-              </div>
+              <Formik
+                initialValues={{
+                  "payment-type": "",
+                  "card-number": "",
+                  "name-on-card": "",
+                  "expiration-date": "",
+                  cvc: "",
+                }}
+                onSubmit={handle_complete_Order}
+              >
+                {({ isSubmitting }) => (
+                  <Form className="space-y-6">
+                    <fieldset className="border border-gray-300 rounded-lg p-4">
+                      <legend className="font-bold">Payment type</legend>
+                      <div className="space-y-2">
+                        <div className="flex items-center space-x-2">
+                          <Field
+                            id="credit-card"
+                            name="payment-type"
+                            type="radio"
+                            value="credit-card"
+                            className="form-radio rounded-full text-indigo-600 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                          />
+                          <label
+                            htmlFor="credit-card"
+                            className="text-gray-700"
+                          >
+                            Credit card
+                          </label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <Field
+                            id="paypal"
+                            name="payment-type"
+                            type="radio"
+                            value="paypal"
+                            className="form-radio rounded-full text-indigo-600 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                          />
+                          <label htmlFor="paypal" className="text-gray-700">
+                            PayPal
+                          </label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <Field
+                            id="etransfer"
+                            name="payment-type"
+                            type="radio"
+                            value="etransfer"
+                            className="form-radio rounded-full text-indigo-600 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                          />
+                          <label htmlFor="etransfer" className="text-gray-700">
+                            eTransfer
+                          </label>
+                        </div>
+                        <ErrorMessage
+                          name="payment-type"
+                          component="div"
+                          className="text-red-500 text-sm"
+                        />
+                      </div>
+                    </fieldset>
+
+                    <div className="space-y-4">
+                      <div>
+                        <label
+                          htmlFor="card-number"
+                          className="font-bold text-gray-700"
+                        >
+                          Card number
+                        </label>
+                        <Field
+                          type="text"
+                          id="card-number"
+                          name="card-number"
+                          autoComplete="cc-number"
+                          className="border border-gray-300 rounded-lg p-2 w-full focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                        />
+                        <ErrorMessage
+                          name="card-number"
+                          component="div"
+                          className="text-red-500 text-sm"
+                        />
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="name-on-card"
+                          className="font-bold text-gray-700"
+                        >
+                          Name on card
+                        </label>
+                        <Field
+                          type="text"
+                          id="name-on-card"
+                          name="name-on-card"
+                          autoComplete="cc-name"
+                          className="border border-gray-300 rounded-lg p-2 w-full focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                        />
+                        <ErrorMessage
+                          name="name-on-card"
+                          component="div"
+                          className="text-red-500 text-sm"
+                        />
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="expiration-date"
+                          className="font-bold text-gray-700"
+                        >
+                          Expiration date (MM/YY)
+                        </label>
+                        <Field
+                          type="text"
+                          name="expiration-date"
+                          id="expiration-date"
+                          autoComplete="cc-exp"
+                          className="border border-gray-300 rounded-lg p-2 w-full focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                        />
+                        <ErrorMessage
+                          name="expiration-date"
+                          component="div"
+                          className="text-red-500 text-sm"
+                        />
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="cvc"
+                          className="font-bold text-gray-700"
+                        >
+                          CVC
+                        </label>
+                        <Field
+                          type="text"
+                          name="cvc"
+                          id="cvc"
+                          autoComplete="csc"
+                          className="border border-gray-300 rounded-lg p-2 w-full focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                        />
+                        <ErrorMessage
+                          name="cvc"
+                          component="div"
+                          className="text-red-500 text-sm"
+                        />
+                      </div>
+                      <button
+                        type="submit"
+                        className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+                        disabled={isSubmitting}
+                        onClick={handle_complete_Order}
+                      >
+                        {isSubmitting ? "Submitting..." : "Complete Order"}
+                      </button>
+                    </div>
+                  </Form>
+                )}
+              </Formik>
             </div>
           </div>
         </div>
