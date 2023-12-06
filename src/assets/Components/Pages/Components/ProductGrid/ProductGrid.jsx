@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import getImagePath from "../ProductDetails/Imagepath";
-import { Skeleton } from "antd";
 
 const ProductGrid = ({ products, title }) => {
   const [sortBy, setSortBy] = useState("Featured");
@@ -81,15 +80,12 @@ const ProductGrid = ({ products, title }) => {
           {sortedProducts.map((product, index) => (
             <div key={index} className="self-center justify-self-center">
               <div className=" h-60 w-auto">
-                {index < 10 ? ( // Show skeleton loader for the first 3 items
-                  <Skeleton.Image style={{ width: "auto", height: "100%" }} />
-                ) : (
-                  <img
-                    src={getImagePath(product.image, product.category)}
-                    alt={product.name}
-                    className="h-full"
-                  />
-                )}
+                <img
+                  // src={product1}
+                  src={getImagePath(product.image, product.category)}
+                  alt={product.name}
+                  className="h-full"
+                />
               </div>
               <div className="details">
                 <h3 className="text-sm text-gray-900">{product.name}</h3>
