@@ -82,7 +82,7 @@ const ProductGrid = ({ products, title }) => {
             <div key={index} className="self-center justify-self-center">
               <div className=" h-60 w-auto">
                 {index < 10 ? ( // Show skeleton loader for the first 3 items
-                  <Skeleton.Image style={{ width: "100%", height: "100%" }} />
+                  <Skeleton.Image style={{ width: "auto", height: "100%" }} />
                 ) : (
                   <img
                     src={getImagePath(product.image, product.category)}
