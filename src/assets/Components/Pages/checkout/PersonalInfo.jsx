@@ -1,14 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 const PersonalInfo = () => {
-  const handleSubmit = (values, { setSubmitting }) => {
-    // Simulate form submission
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
-      setSubmitting(false);
-    }, 400);
-  };
-
   const validate = (values) => {
     const errors = {};
 
@@ -55,9 +47,9 @@ const PersonalInfo = () => {
   };
 
   return (
-    <div className="order-1">
+    <div className="order-1 dark:text-white">
       <div className="border-b border-gray-900/10 pb-12 p-9 ">
-        <h2 className="text-base font-semibold leading-7 text-gray-900">
+        <h2 className="text-base font-semibold leading-7 text-gray-900 dark:text-gray-100 ">
           Personal Information
         </h2>
         <Formik
@@ -72,13 +64,12 @@ const PersonalInfo = () => {
             postalCode: "",
           }}
           validate={validate}
-          onSubmit={handleSubmit}
         >
           <Form className="mt-10 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-6">
             <div className="sm:col-span-3">
               <label
                 htmlFor="firstName"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6  dark:text-whi"
               >
                 First name
               </label>
@@ -86,7 +77,7 @@ const PersonalInfo = () => {
                 type="text"
                 name="firstName"
                 id="firstName"
-                className="block px-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block px-4 w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
               <ErrorMessage
                 name="firstName"
@@ -98,7 +89,7 @@ const PersonalInfo = () => {
             <div className="sm:col-span-3">
               <label
                 htmlFor="lastName"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 "
               >
                 Last name
               </label>
@@ -106,7 +97,7 @@ const PersonalInfo = () => {
                 type="text"
                 name="lastName"
                 id="lastName"
-                className="block px-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block px-4 w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
               <ErrorMessage
                 name="lastName"
@@ -118,7 +109,7 @@ const PersonalInfo = () => {
             <div className="sm:col-span-4">
               <label
                 htmlFor="email"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 "
               >
                 Email address
               </label>
@@ -126,7 +117,7 @@ const PersonalInfo = () => {
                 type="email"
                 name="email"
                 id="email"
-                className="block px-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block px-4 w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
               <ErrorMessage
                 name="email"
@@ -138,7 +129,7 @@ const PersonalInfo = () => {
             <div className="sm:col-span-6">
               <label
                 htmlFor="streetAddress"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 "
               >
                 Street Address
               </label>
@@ -146,7 +137,7 @@ const PersonalInfo = () => {
                 type="text"
                 name="streetAddress"
                 id="streetAddress"
-                className="block px-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block px-4 w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
               <ErrorMessage
                 name="streetAddress"
@@ -158,7 +149,7 @@ const PersonalInfo = () => {
             <div className="sm:col-span-3">
               <label
                 htmlFor="city"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 "
               >
                 City
               </label>
@@ -166,7 +157,7 @@ const PersonalInfo = () => {
                 type="text"
                 name="city"
                 id="city"
-                className="block px-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block px-4 w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
               <ErrorMessage
                 name="city"
@@ -178,7 +169,7 @@ const PersonalInfo = () => {
             <div className="sm:col-span-3">
               <label
                 htmlFor="region"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 "
               >
                 State / Province
               </label>
@@ -186,7 +177,7 @@ const PersonalInfo = () => {
                 type="text"
                 name="region"
                 id="region"
-                className="block px-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block px-4 w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
               <ErrorMessage
                 name="region"
@@ -198,7 +189,7 @@ const PersonalInfo = () => {
             <div className="sm:col-span-3">
               <label
                 htmlFor="country"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 "
               >
                 Country
               </label>
@@ -206,7 +197,7 @@ const PersonalInfo = () => {
                 type="text"
                 name="country"
                 id="country"
-                className="block px-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block px-4 w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
               <ErrorMessage
                 name="country"
@@ -218,7 +209,7 @@ const PersonalInfo = () => {
             <div className="sm:col-span-3">
               <label
                 htmlFor="postalCode"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 "
               >
                 ZIP / Postal code
               </label>
@@ -226,7 +217,7 @@ const PersonalInfo = () => {
                 type="text"
                 name="postalCode"
                 id="postalCode"
-                className="block px-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block px-4 w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
               <ErrorMessage
                 name="postalCode"

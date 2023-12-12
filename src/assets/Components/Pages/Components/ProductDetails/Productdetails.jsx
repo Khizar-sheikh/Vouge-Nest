@@ -17,9 +17,9 @@ const ProductDetails = () => {
 
   return (
     <Layout>
-      <div className="container mx-auto px-4 py-8    ">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className=" w-45 h-90">
+      <div className=" px-4 py-8    ">
+        <div className="grid grid-cols-1  lg:grid-cols-2 place-items-center  md:grid-cols-2 items-center 2xl:text-xl">
+          <div>
             <img
               src={getImagePath(product.image, product.category)}
               alt={product.name}
@@ -60,9 +60,9 @@ const ProductDetails = () => {
               </span>
             </p>
             <div className="text-gray-600 mt-4">
-              <span className="font-semibold">Size:</span>
+              {/* <span className="font-semibold">Size:</span> */}
               <div className="flex items-center mt-2 space-x-4">
-                {product.attributes.size.map((size, index) => (
+                {/* {product.attributes.size.map((size, index) => (
                   <label
                     key={index}
                     className="flex items-center justify-center border border-gray-300 rounded-md p-2 cursor-pointer hover:bg-gray-100"
@@ -75,7 +75,7 @@ const ProductDetails = () => {
                     />
                     <span className="text-sm font-medium">{size}</span>
                   </label>
-                ))}
+                ))} */}
               </div>
               <Button
                 disabled={!product.availability}

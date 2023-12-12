@@ -8,6 +8,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 
 function Checkout() {
   const { cartItems, orderComplete, completedOrder } = useContext(CartContext);
+
   const navigate = useNavigate();
   const totalPrice = cartItems.reduce(
     (total, product) => total + product.price * product.quantity,
@@ -29,7 +30,7 @@ function Checkout() {
           <PersonalInfo />
         </div>
         <div className="order-last lg:order-2 self-center ">
-          <div className="container sticky   m-3 p-4  w-5/6 bg-gray-200">
+          <div className="container sticky   m-3 p-4  w-5/6 bg-gray-200 dark:text-gray-600">
             <h3 className="text-2xl font-semibold mb-6">Order Details</h3>
             <ul className="divide-y divide-gray-200 max-h-60 overflow-y-auto">
               {cartItems.map((product, index) => (
@@ -80,10 +81,10 @@ function Checkout() {
             </div>
           </div>
         </div>
-        <div className="order-2 lg:order-last">
+        <div className="order-2 lg:order-last ">
           <div>
-            <div className="grid grid-cols-1 gap-y-6 m-8">
-              <h2 className="text-xl font-bold">Personal Information</h2>
+            <div className="grid grid-cols-1 gap-y-6 m-8 dark:text-gray-100">
+              <h2 className="text-2xl  font-semibold">Payment</h2>
               <Formik
                 initialValues={{
                   firstName: "",
@@ -103,33 +104,6 @@ function Checkout() {
                 onSubmit={handle_complete_Order}
                 validate={(values) => {
                   const errors = {};
-
-                  if (!values.firstName) {
-                    errors.firstName = "First name is required";
-                  }
-                  if (!values.lastName) {
-                    errors.lastName = "Last name is required";
-                  }
-                  if (!values.email) {
-                    errors.email = "Email is required";
-                  } else if (!/^\S+@\S+\.\S+$/.test(values.email)) {
-                    errors.email = "Invalid email address";
-                  }
-                  if (!values.streetAddress) {
-                    errors.streetAddress = "Street address is required";
-                  }
-                  if (!values.city) {
-                    errors.city = "City is required";
-                  }
-                  if (!values.country) {
-                    errors.country = "Country is required";
-                  }
-                  if (!values.region) {
-                    errors.region = "State / Province is required";
-                  }
-                  if (!values.postalCode) {
-                    errors.postalCode = "ZIP / Postal code is required";
-                  }
 
                   if (!values["payment-type"]) {
                     errors["payment-type"] = "Payment type is required";
@@ -151,19 +125,19 @@ function Checkout() {
               >
                 {({ isSubmitting }) => (
                   <Form className="space-y-6">
-                    <div className="grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-6">
-                      <div className="sm:col-span-3">
+                    <div className="grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-6 dark:text-white">
+                      <div className="sm:col-span-4">
                         <label
                           htmlFor="firstName"
-                          className="block text-sm font-medium leading-6 text-gray-900"
+                          className="block text-sm font-medium leading-6"
                         >
-                          First name
+                          Name
                         </label>
                         <Field
                           type="text"
                           name="firstName"
                           id="firstName"
-                          className="block px-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          className="block px-4 py-2 w-full rounded-md border-0 py-1. shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         />
                         <ErrorMessage
                           name="firstName"
@@ -171,26 +145,22 @@ function Checkout() {
                           className="text-red-500 text-sm"
                         />
                       </div>
-                      {/* Add other personal information fields similarly */}
                     </div>
 
                     {/* Payment Information Section */}
-                    <h2 className="text-xl font-bold">Payment</h2>
+
                     <fieldset className="border border-gray-300 rounded-lg p-4">
                       <legend className="font-bold">Payment type</legend>
                       <div className="space-y-2">
-                        <div className="flex items-center space-x-2">
+                        <div className="flex items-center space-x-2 ">
                           <Field
                             id="credit-card"
                             name="payment-type"
                             type="radio"
                             value="credit-card"
-                            className="form-radio rounded-full text-indigo-600 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                            className="form-radio rounded-full"
                           />
-                          <label
-                            htmlFor="credit-card"
-                            className="text-gray-700"
-                          >
+                          <label htmlFor="credit-card" className="">
                             Credit card
                           </label>
                         </div>
@@ -200,9 +170,9 @@ function Checkout() {
                             name="payment-type"
                             type="radio"
                             value="credit-card"
-                            className="form-radio rounded-full text-indigo-600 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                            className="form-radio rounded-full"
                           />
-                          <label htmlFor="Debit-card" className="text-gray-700">
+                          <label htmlFor="Debit-card" className="">
                             Debit card
                           </label>
                         </div>
@@ -212,13 +182,12 @@ function Checkout() {
                             name="payment-type"
                             type="radio"
                             value="Visa-card"
-                            className="form-radio rounded-full text-indigo-600 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                            className="form-radio rounded-full"
                           />
-                          <label htmlFor="Visa-card" className="text-gray-700">
+                          <label htmlFor="Visa-card" className="">
                             Visa card
                           </label>
                         </div>
-                        {/* Add other payment type radio inputs similarly */}
                         <ErrorMessage
                           name="payment-type"
                           component="div"
@@ -228,10 +197,7 @@ function Checkout() {
                     </fieldset>
                     <div className="space-y-4">
                       <div>
-                        <label
-                          htmlFor="card-number"
-                          className="font-bold text-gray-700"
-                        >
+                        <label htmlFor="card-number" className="font-bold ">
                           Card number
                         </label>
                         <Field
@@ -239,7 +205,7 @@ function Checkout() {
                           id="card-number"
                           name="card-number"
                           autoComplete="cc-number"
-                          className="border border-gray-300 rounded-lg p-2 w-full focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                          className="border border-gray-300 rounded-lg p-2 w-full focus:border-indigo-500  focus:ring focus:ring-indigo-600 focus:ring-opacity-50"
                         />
                         <ErrorMessage
                           name="card-number"
@@ -247,16 +213,34 @@ function Checkout() {
                           className="text-red-500 text-sm"
                         />
                       </div>
-
-                      <button
-                        type="submit"
-                        className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
-                        disabled={isSubmitting}
-                        onClick={handle_complete_Order}
-                      >
-                        {isSubmitting ? "Submitting..." : "Complete Order"}
-                      </button>
                     </div>
+                    <div className="space-y-4">
+                      <div>
+                        <label htmlFor="cvc" className="font-bold ">
+                          CVV
+                        </label>
+                        <Field
+                          type="text"
+                          id="cvc"
+                          name="cvc"
+                          autoComplete="cvc-number"
+                          className="border border-gray-300 rounded-lg p-2 w-full focus:border-indigo-500  focus:ring focus:ring-indigo-600 focus:ring-opacity-50"
+                        />
+                        <ErrorMessage
+                          name="cvc"
+                          component="div"
+                          className="text-red-500 text-sm"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      type="submit"
+                      className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+                      disabled={isSubmitting}
+                      onClick={handle_complete_Order}
+                    >
+                      {isSubmitting ? "Submitting..." : "Complete Order"}
+                    </button>
                   </Form>
                 )}
               </Formik>
