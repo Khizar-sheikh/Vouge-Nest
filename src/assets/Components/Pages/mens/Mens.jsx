@@ -1,23 +1,25 @@
-import menData from './men-data.json'; // Import your JSON data here
-import Layout from './../../layout/Layout';
+import menData from "./men-data.json"; // Import your JSON data here
+import Layout from "./../../layout/Layout";
 // import ProductContainer from '../Components/ProductGrid/ProductContainer';
-import ProductGrid from '../Components/ProductGrid/ProductGrid';
+import ProductGrid from "../Components/ProductGrid/ProductGrid";
 
 const Men = () => {
-  const menShirts = menData.menShirts;
-  const menBottoms = menData.menBottoms;
+  const menShirts = menData.mensweatshirt;
+  const menBottoms = menData.menJackets;
 
-  let menItems = [ ...menShirts, ...menBottoms];
-
+  let menItems = [...menShirts, ...menBottoms];
 
   return (
     <div>
-     <Layout>
-    <ProductGrid products={menItems}  category="mens" title="Mens category"/>
-     </Layout>
+      <Layout>
+        <ProductGrid
+          products={menItems}
+          category="mens"
+          title="Mens category"
+        />
+      </Layout>
     </div>
   );
 };
-
 
 export default Men;

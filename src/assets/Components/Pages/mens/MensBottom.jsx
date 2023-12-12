@@ -1,18 +1,17 @@
-import ProductGrid from '../Components/ProductGrid/ProductGrid';
-import menData from './men-data.json'; // Import your JSON data here
-import Layout from './../../layout/Layout';
-
+import ProductGrid from "../Components/ProductGrid/ProductGrid";
+import menData from "./men-data.json"; // Import your JSON data here
+import Layout from "./../../layout/Layout";
 
 function MensBottom() {
-  const menBottoms = menData.menBottoms;
-  let menItems = [ ...menBottoms];
+  const menBottoms = menData.menJackets;
+  let menItems = [...menBottoms];
   return (
     <div>
       <Layout>
-        <ProductGrid products={menItems} category="mens" title="Mens Bottom"/>
+        <ProductGrid products={menItems} category="mens" title="Mens Jackets" />
       </Layout>
     </div>
-  )
+  );
 }
 
-export default MensBottom
+export default MensBottom;
