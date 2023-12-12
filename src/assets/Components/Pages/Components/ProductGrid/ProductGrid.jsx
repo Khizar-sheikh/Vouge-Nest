@@ -2,10 +2,27 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import getImagePath from "../ProductDetails/Imagepath";
+import { Pagination } from "antd";
 
 const ProductGrid = ({ products, title }) => {
   const [sortBy, setSortBy] = useState("Featured");
   const [sortedProducts, setSortedProducts] = useState([]);
+  const [currentPage, setcurrentPage] = useState(1);
+  const Itemperpage = 12;
+
+  const indexOfLastItem = currentPage * Itemperpage;
+  const indexOfFirstItem = indexOfLastItem - Itemperpage;
+  const currentItems = sortedProducts.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handlepageChange = (page) => {
+    window.scrollTo({
+      top: 10,
+      behavior: "smooth", // Optional: for smooth scrolling
+    });
+    setcurrentPage(page);
+  };
+  const totalItems = products.length;
+  const totalPages = Math.ceil(totalItems / Itemperpage);
 
   useEffect(() => {
     setSortedProducts(products);
@@ -41,25 +58,24 @@ const ProductGrid = ({ products, title }) => {
     }
 
     setSortedProducts(updatedSortedProducts);
-    console.log(updatedSortedProducts);
   };
 
   return (
-    <div>
-      <div className=" flex flex-col lg:flex-row md:flex-row justify-around items-center mt-3  ">
+    <div className="pb-5">
+      <div className=" flex flex-col lg:flex-row md:flex-row justify-around  mt-3 xl:py-5 dark:bg-white dark:text-black  ">
         <div>
-          {/* <PageHeader title={title} /> */}
-          <h1 className="text-center text-3xl font-extrabold font-sans ">
+          <h1 className="text-center text-3xl font-extrabold font-sans 2xl:text-5xl ">
             {title}
           </h1>
         </div>
+
         <div
           id="sortandstyle"
-          className="flex justify-around items-center py-4 "
+          className="flex justify-around items-center py-4 2xl:py-6 2xl:text-2xl "
         >
           <div className="sorting">
             <select
-              className="border border-gray-300 rounded-md py-4 px-12 focus:outline-none "
+              className="border border-gray-300 rounded-md py-4 px-12 focus:outline-none dark:bg-white "
               value={sortBy}
               onChange={handleSortChange}
             >
@@ -75,19 +91,20 @@ const ProductGrid = ({ products, title }) => {
           </div>
         </div>
       </div>
-      <div className="bg-white mx-auto max-w-7xl px-4 py-8 sm:px-6  ">
-        <div className="grid grid-cols-2 gap-x-6 gap-y-10  md:grid-cols-3 lg:grid-cols-4 xl:gap-x-6">
-          {sortedProducts.map((product, index) => (
-            <div key={index} className="self-center justify-self-center">
-              <div className=" h-60 w-auto">
+
+      <div className="bg-white relative">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10  md:grid-cols-3 lg:grid-cols-4">
+          {currentItems.map((product, index) => (
+            <div key={index} className="grid  justify-self-center">
+              <div className=" h-60 w-auto 2xl:h-80 ">
                 <img
                   // src={product1}
                   src={getImagePath(product.image, product.category)}
                   alt={product.name}
-                  className="h-full"
+                  className="h-full  xl:w-full"
                 />
               </div>
-              <div className="details">
+              <div className="details 2xl:text-lg">
                 <h3 className="text-sm text-gray-900">{product.name}</h3>
                 <p className="mt-1 text-lg font-medium text-gray-900">
                   ${product.price}
@@ -100,6 +117,25 @@ const ProductGrid = ({ products, title }) => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="my-5 mx-auto w-max">
+          <Pagination
+            defaultCurrent={1}
+            total={totalPages}
+            pageSize={1}
+            onChange={handlepageChange}
+            hideOnSinglePage
+            itemRender={(current, type, originalElement) => {
+              if (type === "page") {
+                return (
+                  <a className="inline-block rounded-lg bg-gray-200 text-sm md:text-base lg:text-lg">
+                    {current}
+                  </a>
+                );
+              }
+              return originalElement;
+            }}
+          />
         </div>
       </div>
     </div>
