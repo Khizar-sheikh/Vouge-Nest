@@ -1,5 +1,5 @@
 {
-  "womenshirts": [
+  "velocityshirts": [
     {
       "id": 1,
       "name": "Cotton Polo Shirt",
@@ -10,8 +10,8 @@
         "Classic polo collar",
         "Suitable for casual occasions"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L", "XL"],
@@ -37,8 +37,8 @@
         "Button-up closure",
         "Elegant and stylish design"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -64,8 +64,8 @@
         "Ideal for warm weather",
         "Available in various colors"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "L", "XL"],
@@ -91,8 +91,8 @@
         "Versatile and timeless",
         "Available in multiple sizes"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -119,7 +119,7 @@
         "Comfortable and breathable"
       ],
       "image": "product2",
-      "category": "womens",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L"],
@@ -146,7 +146,7 @@
         "Soft and lightweight fabric"
       ],
       "image": "product2",
-      "category": "womens",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L"],
@@ -173,7 +173,7 @@
         "Available in various colors"
       ],
       "image": "product1",
-      "category": "womens",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["L", "XL"],
@@ -200,7 +200,7 @@
         "Perfect for colder seasons"
       ],
       "image": "product1",
-      "category": "womens",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L"],
@@ -228,7 +228,7 @@
         "Comfortable for everyday wear"
       ],
       "image": "product1",
-      "category": "womens",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L"],
@@ -255,7 +255,7 @@
         "Soft and breathable fabric"
       ],
       "image": "product1",
-      "category": "womens",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L", "XL"],
@@ -282,7 +282,7 @@
         "Great for casual outings"
       ],
       "image": "product1",
-      "category": "womens",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -309,7 +309,7 @@
         "Perfect for beach days"
       ],
       "image": "product2",
-      "category": "womens",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "L", "XL"],
@@ -336,7 +336,7 @@
         "Versatile for casual wear"
       ],
       "image": "product2",
-      "category": "womens",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L"],
@@ -362,8 +362,8 @@
         "Timeless and elegant",
         "Suitable for formal occasions"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -389,8 +389,8 @@
         "Button-up closure",
         "Perfect for warm climates"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L", "XL"],
@@ -416,8 +416,8 @@
         "Versatile for everyday wear",
         "Breathable fabric"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -443,8 +443,8 @@
         "Easy to style",
         "Available in multiple colors"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L", "XL"],
@@ -470,8 +470,8 @@
         "Lightweight fabric",
         "Casual and stylish"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -497,8 +497,8 @@
         "Versatile for various occasions",
         "Available in multiple sizes"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L", "XL"],
@@ -524,8 +524,8 @@
         "Button-up closure",
         "Stylish and cozy"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -551,8 +551,8 @@
         "Comfortable and versatile",
         "Available in multiple colors"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L"],
@@ -578,8 +578,8 @@
         "Smooth and comfortable",
         "Great for formal events"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L"],
@@ -605,8 +605,8 @@
         "Lightweight and breezy",
         "Perfect for vacations"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L"],
@@ -633,7 +633,7 @@
         "Available in multiple colors"
       ],
       "image": "product2",
-      "category": "womens",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L"],
@@ -659,8 +659,8 @@
         "Comfortable fit",
         "Available in various colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -686,8 +686,8 @@
         "Casual and comfortable",
         "Ideal for warm weather"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L"],
@@ -713,8 +713,8 @@
         "Great for workouts",
         "Soft and breathable fabric"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -740,8 +740,8 @@
         "Button-up closure",
         "Trendy and stylish"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L"],
@@ -767,8 +767,8 @@
         "Casual and relaxed fit",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -794,8 +794,8 @@
         "Perfect for layering",
         "Available in various colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L"],
@@ -822,7 +822,7 @@
         "Available in multiple colors"
       ],
       "image": "product2",
-      "category": "womens",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -848,8 +848,8 @@
         "Button-up closure",
         "Stylish and comfortable"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["S", "M", "L"],
@@ -875,8 +875,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product1",
-      "category": "womens",
+      "image": "product2",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -893,7 +893,7 @@
       "featured": false
     }
   ],
-  "womenOuterwears": [
+  "velocitybottoms": [
     {
       "id": 34,
       "name": "V-Neck Casual T-Shirt",
@@ -904,8 +904,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -931,8 +931,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -958,8 +958,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -985,8 +985,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1012,8 +1012,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1039,8 +1039,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1066,8 +1066,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1093,8 +1093,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1120,8 +1120,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1147,8 +1147,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1174,8 +1174,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1201,8 +1201,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1228,8 +1228,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product5",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1255,8 +1255,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product5",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1282,8 +1282,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product5",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1309,8 +1309,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product5",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1336,8 +1336,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product5",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1363,8 +1363,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product5",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1390,8 +1390,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product5",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1417,8 +1417,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product5",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1444,8 +1444,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1471,8 +1471,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product6",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1498,8 +1498,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product6",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1525,8 +1525,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product6",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1552,8 +1552,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product6",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1579,8 +1579,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product6",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1606,8 +1606,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product6",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1633,8 +1633,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product6",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1660,8 +1660,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product6",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1687,8 +1687,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product6",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1714,8 +1714,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product6",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1741,8 +1741,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product6",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1768,8 +1768,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1795,8 +1795,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1822,8 +1822,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1849,8 +1849,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1876,8 +1876,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1903,8 +1903,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1930,8 +1930,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1957,8 +1957,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],
@@ -1984,8 +1984,8 @@
         "Soft and breathable",
         "Available in multiple colors"
       ],
-      "image": "product4",
-      "category": "womens",
+      "image": "product3",
+      "category": "velocity",
       "type": "Shirt",
       "attributes": {
         "size": ["M", "L", "XL"],

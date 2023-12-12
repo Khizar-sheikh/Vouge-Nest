@@ -1,11 +1,11 @@
 import Layout from "../../layout/Layout";
 import ProductGrid from "../Components/ProductGrid/ProductGrid";
-import womendata from "../../Pages/mens/men-data.json";
+import womendata from "./womens-data.json";
 
-const womenShirts = womendata.menShirts;
-const womenBottoms = womendata.menBottoms;
+const womenShirts = womendata.womenshirts;
+const womenOuterwears = womendata.womenOuterwears;
 
-let womenItems = [...womenShirts, ...womenBottoms];
+let womenItems = [...womenShirts, ...womenOuterwears];
 
 function Womens() {
   return (

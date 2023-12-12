@@ -1,17 +1,21 @@
-import Layout from './../../layout/Layout';
-import ProductGrid from './../Components/ProductGrid/ProductGrid';
-import menData from '../../Pages/mens/men-data.json';
+import Layout from "./../../layout/Layout";
+import ProductGrid from "./../Components/ProductGrid/ProductGrid";
+import data from "./velocitydata.json";
 
-const velocityProducts = menData.menShirts
+const velocityProducts = data.velocityshirts;
 
 function Velocity() {
   return (
     <div>
       <Layout>
-<ProductGrid products={velocityProducts} category= "velocity" title="Velocity" /> 
+        <ProductGrid
+          products={velocityProducts}
+          category="velocity"
+          title="Velocity"
+        />
       </Layout>
     </div>
-  )
+  );
 }
 
-export default Velocity
+export default Velocity;

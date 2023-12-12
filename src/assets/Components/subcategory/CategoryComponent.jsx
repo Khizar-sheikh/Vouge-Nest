@@ -29,7 +29,7 @@ const CategoryComponent = ({ category, horizontalimage, verticalimage }) => {
     position: "relative",
     overflow: "hidden",
     cursor: "pointer",
-    marginTop: "15px",
+    marginTop: "5px",
   };
 
   const contentWrapperStyle = {
@@ -39,12 +39,13 @@ const CategoryComponent = ({ category, horizontalimage, verticalimage }) => {
     transform: "translate(-50%, -50%)",
     textAlign: "center",
     width: "100vw",
+    textColor: "#ffff",
   };
 
   return (
     <div style={containerStyle}>
       <div style={contentWrapperStyle}>
-        <h2 className="text-3xl md:text-6xl lg:text-5xl text-gray-100 font-bold">
+        <h2 className="text-3xl md:text-4xl lg:text-7xl  text-gray-100 font-bold">
           {category}
         </h2>
       </div>

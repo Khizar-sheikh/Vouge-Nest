@@ -1,19 +1,23 @@
-import Layout from './../../layout/Layout';
-import ProductGrid from './../Components/ProductGrid/ProductGrid';
-import womendata from "../../Pages/mens/men-data.json"
+import Layout from "./../../layout/Layout";
+import ProductGrid from "./../Components/ProductGrid/ProductGrid";
+import womendata from "./womens-data.json";
 
-const womenBottoms = womendata.menBottoms;
+const womenSweaters = womendata.womenOuterwears;
 
-let womenItems = [ ...womenBottoms];
+let womenItems = [...womenSweaters];
 
 function WomensOuterwear() {
   return (
     <div>
       <Layout>
-< ProductGrid products={womenItems} category="womens" title="Womens-OuterWear"/>
+        <ProductGrid
+          products={womenItems}
+          category="womens"
+          title="Womens-OuterWear"
+        />
       </Layout>
     </div>
-  )
+  );
 }
 
 export default WomensOuterwear;
