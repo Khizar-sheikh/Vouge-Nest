@@ -3,21 +3,35 @@ import { Carousel } from "antd";
 import { Link } from "react-router-dom";
 import { Skeleton } from "antd";
 
-import hero from "../Images/HeroImg1.jpg";
-import hero2 from "../Images/hero2-min.jpg";
-import hero5 from "../Images/hero5-min.jpg";
-import hero4 from "../Images/hero4-min.jpg";
-import hero45 from "../Images/hero45-min.jpg";
+// Desktop Images
+import hero from "../Images/hero.webp";
+import hero2 from "../Images/hero2.webp";
+import hero4 from "../Images/hero4.webp";
+import hero45 from "../Images/hero3.webp";
+
+import heroV from "../Images/heroV.webp";
+import hero2V from "../Images/hero2V.webp";
+import hero4V from "../Images/hero4V.webp";
+import hero45V from "../Images/hero3V.webp";
+
+// Mobile Images
 
 const images = [
   { url: hero2, link: "/mens" },
   { url: hero, link: "/mens" },
   { url: hero4, link: "/womens" },
-  { url: hero5, link: "/kids" },
   { url: hero45, link: "/velocity" },
 ];
 
+const vertical = [
+  { url: hero2V },
+  { url: heroV },
+  { url: hero4V },
+  { url: hero45V },
+];
+
 const contentStyle = {
+  paddingTop: "60px",
   color: "#fff",
   background: "#364d79",
   width: "100vw",
@@ -25,17 +39,33 @@ const contentStyle = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  backgroundSize: "contain",
+  backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
-  height: "89vh",
-  maxWidth: "100vw",
-  minWidth: "100vw",
+  height: "100vh",
+  maxWidth: "100%",
+  minWidth: "100%",
+  paddingBottom: "60px",
 };
 
 const Herosection = () => {
   const [loading, setLoading] = useState(true);
   const [, setShowImages] = useState(false);
+
+  const [isHorizontal, setIsHorizontal] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsHorizontal(window.innerWidth >= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -65,7 +95,9 @@ const Herosection = () => {
               <div
                 style={{
                   ...contentStyle,
-                  backgroundImage: `url(${image.url})`,
+                  backgroundImage: isHorizontal
+                    ? `url(${image.url})`
+                    : `url(${vertical[index].url})`,
                 }}
               ></div>
             </Link>
