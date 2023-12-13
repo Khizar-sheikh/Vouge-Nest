@@ -7,10 +7,10 @@ function OrderConfirmation() {
       <div className="bg-gray-100 min-h-screen flex flex-col">
         <main className="flex-1 container mx-auto py-8">
           <div className="bg-white p-8 rounded-lg shadow-md">
-            <h1 className="text-5xl font-bold text-center mb-8 text-blue-600">
+            <h1 className=" text-2xl lg:text-5xl font-bold text-center mb-8 text-blue-600">
               Your Order Has Been Placed!
             </h1>
-            <p className="text-2xl text-center mb-10">
+            <p className="lg:text-2xl text-lg text-center mb-10">
               Thank you for shopping with us!
             </p>
 
