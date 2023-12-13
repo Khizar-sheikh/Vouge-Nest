@@ -80,7 +80,7 @@ function Navbar() {
                 <div className="submenu  ">
                   <li>
                     {" "}
-                    <Link to="/mens/tops">Shirts</Link>
+                    <Link to="/mens/sweatshirts">Shirts</Link>
                   </li>
                   <li>
                     {" "}
@@ -101,7 +101,7 @@ function Navbar() {
                 <div className="submenu ">
                   <li>
                     {" "}
-                    <Link to="/womens/dresses">Dresses</Link>
+                    <Link to="/womens/Shirts">Shirts</Link>
                   </li>{" "}
                   <li>
                     <Link to="/womens/outerwear">OuterWear</Link>

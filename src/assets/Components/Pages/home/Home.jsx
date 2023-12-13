@@ -59,7 +59,7 @@ function Home() {
           verticalimage={MenSweatShrtsV}
         />
         <div className={linkdivstyle}>
-          <Link to="/mens/tops" className={linkstyle}>
+          <Link to="/mens/sweatshirts" className={linkstyle}>
             Shop Now
           </Link>
         </div>
@@ -71,7 +71,7 @@ function Home() {
           verticalimage={WomenShirtsV}
         />
         <div className={linkdivstyle}>
-          <Link to="/womens/Dresses" className={linkstyle}>
+          <Link to="/womens/Shirts" className={linkstyle}>
             Shop Now
           </Link>
         </div>

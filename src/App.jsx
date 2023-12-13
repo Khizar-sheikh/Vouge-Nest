@@ -33,9 +33,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/mens" element={<Mens />} />
             <Route path="/mens/jackets" element={<MensBottom />} />
-            <Route path="/mens/tops" element={<MensTops />} />
+            <Route path="/mens/sweatshirts" element={<MensTops />} />
             <Route path="/womens" element={<Womens />} />
-            <Route path="/womens/dresses" element={<WomensDresses />} />
+            <Route path="/womens/Shirts" element={<WomensDresses />} />
             <Route path="/womens/outerwear" element={<WomensOuterwear />} />
             <Route path="/velocity" element={<Velocity />} />
             <Route path="/checkout" element={<Checkout />} />
