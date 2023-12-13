@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Layout from "../../../layout/Layout";
 import { Rate, Tag, Button } from "antd";
@@ -8,15 +8,28 @@ import getImagePath from "./Imagepath";
 
 const ProductDetails = () => {
   const { addToCart } = useContext(CartContext);
+  const [showAlert, setshowAlert] = useState(false);
+  const [addTocart, setaddedTocart] = useState(false);
   const location = useLocation();
   const product = location.state.product;
 
   const handleAddToCart = () => {
     addToCart(product);
+    setaddedTocart(true);
+    setshowAlert(true);
+    setTimeout(() => {
+      setaddedTocart(false);
+      setshowAlert(false);
+    }, 3000);
   };
 
   return (
     <Layout>
+      {showAlert && (
+        <div className="bg-green-600 text-white p-3 fixed top-20 w-40 mx-auto left-0 right-0 text-center rounded-lg border-4 border-green-300">
+          Added to Cart
+        </div>
+      )}
       <div className=" px-4 py-8    ">
         <div className="grid grid-cols-1  lg:grid-cols-2 place-items-center  md:grid-cols-2 items-center 2xl:text-xl">
           <div>
@@ -83,7 +96,12 @@ const ProductDetails = () => {
                 style={{
                   textAlign: "center",
 
-                  backgroundColor: product.availability ? "#1890ff" : "#d9d9d9",
+                  backgroundColor: addTocart
+                    ? "#34D399"
+                    : product.availability
+                    ? "#1890ff"
+                    : "#d9d9d9",
+
                   color: product.availability ? "#fff" : "#555",
                   border: "none",
                   borderRadius: "4px",
@@ -95,7 +113,11 @@ const ProductDetails = () => {
                   width: "160px",
                 }}
               >
-                {product.availability ? "Add to Cart" : "Out of Stock"}
+                {addTocart
+                  ? "Added to Cart"
+                  : product.availability
+                  ? "Add to Cart"
+                  : "Out of Stock"}
               </Button>
             </div>
             <p className="text-gray-600 my-4 flex items-center ">
