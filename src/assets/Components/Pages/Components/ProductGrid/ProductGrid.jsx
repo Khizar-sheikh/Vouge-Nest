@@ -13,12 +13,14 @@ const ProductGrid = ({ products, title }) => {
   const indexOfLastItem = currentPage * Itemperpage;
   const indexOfFirstItem = indexOfLastItem - Itemperpage;
   const currentItems = sortedProducts.slice(indexOfFirstItem, indexOfLastItem);
-
-  const handlepageChange = (page) => {
+  function windowscroll() {
     window.scrollTo({
       top: 10,
       behavior: "smooth", // Optional: for smooth scrolling
     });
+  }
+  const handlepageChange = (page) => {
+    windowscroll();
     setcurrentPage(page);
   };
   const totalItems = products.length;
@@ -93,15 +95,15 @@ const ProductGrid = ({ products, title }) => {
       </div>
 
       <div className="bg-white relative">
-        <div className="grid grid-cols-2 gap-x-6 gap-y-10  md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-x-3 mx-9 gap-y-10  md:grid-cols-3 lg:grid-cols-4">
           {currentItems.map((product, index) => (
             <div key={index} className="grid  justify-self-center">
-              <div className=" h-60 w-auto 2xl:h-80 ">
+              <div className="">
                 <img
                   // src={product1}
                   src={getImagePath(product.image, product.category)}
                   alt={product.name}
-                  className="h-full  xl:w-full"
+                  className="h-auto  max-w-full "
                 />
               </div>
               <div className="details 2xl:text-lg">
@@ -110,7 +112,11 @@ const ProductGrid = ({ products, title }) => {
                   ${product.price}
                 </p>
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-                  <Link to={`/products/${product.id}`} state={{ product }}>
+                  <Link
+                    onClick={windowscroll}
+                    to={`/products/${product.id}`}
+                    state={{ product }}
+                  >
                     View Details
                   </Link>
                 </button>
