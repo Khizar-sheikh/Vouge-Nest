@@ -31,7 +31,7 @@ const vertical = [
 ];
 
 const contentStyle = {
-  paddingTop: "60px",
+
   color: "#fff",
   background: "#364d79",
   width: "100vw",
@@ -45,7 +45,6 @@ const contentStyle = {
   height: "100vh",
   maxWidth: "100%",
   minWidth: "100%",
-  paddingBottom: "60px",
 };
 
 const Herosection = () => {
@@ -89,7 +88,7 @@ const Herosection = () => {
           <Skeleton.Image active style={{ width: "95vw", height: "95vh" }} />
         </div>
       ) : (
-        <Carousel autoplay effect="fade">
+        <Carousel autoplay={true} autoplaySpeed={3500} effect="fade" dotPosition="right">
           {images.map((image, index) => (
             <Link key={index} to={image.link}>
               <div

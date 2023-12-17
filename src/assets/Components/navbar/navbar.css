@@ -17,7 +17,7 @@ body {
 }
 :root {
   --my-font: Bodoni, serif;
-  --large-font: 2rem;
+  --large-font: 30px;
   --medium-font: 1.7rem;
   --small-font: 1rem;
 }
@@ -146,7 +146,7 @@ nav {
   text-align: center;
   font-weight: bold;
   padding: 4px 0;
-  margin: 10px;
+  margin: 8px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 

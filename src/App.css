@@ -1,3 +1,10 @@
-.content{
-    padding-top: 60px;
+.content {
+  padding-top: 60px;
+}
+.text-shadow {
+  text-shadow: -3px 3px 0 black, -1px 2px 0 black, -2px 5px 0 black,
+    0px 3px 0 black;
+}
+::-webkit-scrollbar {
+  width: 1px;
 }

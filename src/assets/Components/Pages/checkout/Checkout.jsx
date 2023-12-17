@@ -7,7 +7,7 @@ import PersonalInfo from "./PersonalInfo";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 function Checkout() {
-  const { cartItems, orderComplete, completedOrder } = useContext(CartContext);
+  const { cartItems, orderComplete } = useContext(CartContext);
 
   const navigate = useNavigate();
   const totalPrice = cartItems.reduce(
@@ -16,11 +16,16 @@ function Checkout() {
   );
   const DeliveryCharges = 5;
   const totalPriceWithDelivery = totalPrice + DeliveryCharges;
-
+  function windowscroll() {
+    window.scrollTo({
+      top: 10,
+      behavior: "smooth", // Optional: for smooth scrolling
+    });
+  }
   function handle_complete_Order() {
     orderComplete();
     navigate("/order-confirm");
-    console.log(completedOrder);
+    windowscroll();
   }
 
   return (

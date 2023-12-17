@@ -52,7 +52,7 @@ function Home() {
       <div className="mb-3 lg:mb-1">
         <Herosection />
       </div>
-      <div className=" relative pt-16 lg:pt-14 2xl:pt-20  ">
+      <div className="relative ">
         <CategoryComponent
           category="Men SweatShirt"
           horizontalimage={MenSweatShrts}
