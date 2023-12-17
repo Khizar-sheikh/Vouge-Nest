@@ -8,3 +8,29 @@
 ::-webkit-scrollbar {
   width: 1px;
 }
+.image-transition {
+  animation: fadeInOut 0.3s cubic-bezier(0.43, 0.97, 0, 0.48);
+  -webkit-animation: fadeInOut 0.3s cubic-bezier(0.43, 0.97, 0, 0.48);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; /* Start from fully transparent */
+  }
+  50% {
+    opacity: 1; /* Reach full opacity halfway */
+  }
+  100% {
+    opacity: 0; /* Fade out to fully transparent */
+  }
+}
+
+#imageheight-details {
+  height: 90vh;
+}
+
+@media screen and (max-width: 480px) {
+  #imageheight-details {
+    height: 60vh;
+  }
+}

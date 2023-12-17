@@ -64,7 +64,7 @@ const ProductGrid = ({ products, title }) => {
 
   return (
     <div className="pb-5">
-      <div className=" flex flex-col lg:flex-row md:flex-row justify-around  mt-3 xl:py-5 dark:bg-white dark:text-black  ">
+      <div className=" flex flex-col lg:flex-row md:flex-row justify-around items-center mt-3 xl:py-5 dark:bg-white dark:text-black  ">
         <div>
           <h1 className="text-center text-3xl font-extrabold font-sans 2xl:text-5xl ">
             {title}
