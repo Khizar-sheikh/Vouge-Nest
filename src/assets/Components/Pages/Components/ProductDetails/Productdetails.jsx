@@ -12,11 +12,22 @@ const ProductDetails = () => {
   const [addTocart, setaddedTocart] = useState(false);
   const location = useLocation();
   const product = location.state.product;
+  const [selectedImage, setSelectedImage] = useState(product.image);
+  const [isImageChanged, setIsImageChanged] = useState(false); // Track if image cha
+
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+    setIsImageChanged(true); // Set flag to true when image changes
+    setTimeout(() => {
+      setIsImageChanged(false); // Reset flag after the transition duration
+    }, 500); // Adjust this duration to match your CSS transition duration
+  };
 
   const handleAddToCart = () => {
     addToCart(product);
     setaddedTocart(true);
     setshowAlert(true);
+
     setTimeout(() => {
       setaddedTocart(false);
       setshowAlert(false);
@@ -30,15 +41,36 @@ const ProductDetails = () => {
           Added to Cart
         </div>
       )}
-      <div className=" px-4 py-8    ">
+      <div className=" px-4 py-8 dark:text-gray-50 text-gray-600  ">
         <div className="grid grid-cols-1  lg:grid-cols-2 place-items-center  md:grid-cols-2 items-center 2xl:text-xl">
-          <div>
-            <img
-              src={getImagePath(product.image, product.category)}
-              alt={product.name}
-              style={{ width: "auto", height: "80vh" }}
-            />
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="flex lg:flex-col flex-row lg:justify-between order-last lg:order-first justify-between">
+              {product.additionalimages.map((image, index) => (
+                <div
+                  className="subimage"
+                  key={index + 1}
+                  onClick={() => handleImageClick(image)}
+                >
+                  <img
+                    src={getImagePath(image, product.category)}
+                    alt=""
+                    className="lg:h-32 w-auto mb-4 mr-5 mt-2 h-24"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div>
+              <img
+                src={getImagePath(selectedImage, product.category)}
+                alt={product.name}
+                id="imageheight-details"
+                className={`${isImageChanged ? 'image-transition' : ''}`} // Apply the class conditionally
+                style={{ width: "auto" }}
+              />
+            </div>
           </div>
+
           <div>
             <h2 className="text-2xl font-bold mb-4">{product.name}</h2>
             <div className="mt-6 flex items-center">
@@ -66,29 +98,16 @@ const ProductDetails = () => {
                 {product.ratings.count === 1 ? "review" : "reviews"})
               </span>
             </div>
-            <p className="text-gray-600 my-4 flex items-center ">
+            <p className=" my-4 flex items-center ">
               <span className="font-semibold block mb-1">Price:</span>
               <span className="font-semibold text-lg px-2">
                 ${product.price}
               </span>
             </p>
-            <div className="text-gray-600 mt-4">
+            <div className=" mt-4">
               {/* <span className="font-semibold">Size:</span> */}
               <div className="flex items-center mt-2 space-x-4">
-                {/* {product.attributes.size.map((size, index) => (
-                  <label
-                    key={index}
-                    className="flex items-center justify-center border border-gray-300 rounded-md p-2 cursor-pointer hover:bg-gray-100"
-                  >
-                    <input
-                      type="radio"
-                      name="size"
-                      value={size}
-                      className="sr-only"
-                    />
-                    <span className="text-sm font-medium">{size}</span>
-                  </label>
-                ))} */}
+
               </div>
               <Button
                 disabled={!product.availability}
@@ -99,8 +118,8 @@ const ProductDetails = () => {
                   backgroundColor: addTocart
                     ? "#34D399"
                     : product.availability
-                    ? "#1890ff"
-                    : "#d9d9d9",
+                      ? "#1890ff"
+                      : "#d9d9d9",
 
                   color: product.availability ? "#fff" : "#555",
                   border: "none",
@@ -116,16 +135,16 @@ const ProductDetails = () => {
                 {addTocart
                   ? "Added to Cart"
                   : product.availability
-                  ? "Add to Cart"
-                  : "Out of Stock"}
+                    ? "Add to Cart"
+                    : "Out of Stock"}
               </Button>
             </div>
-            <p className="text-gray-600 my-4 flex items-center ">
+            <p className=" my-4 flex items-center ">
               <span className="font-semibold block mb-1">Category:</span>
               {"     "}
               <span className="capitalize px-2">{product.category}</span>
             </p>
-            <div className="text-gray-600 mb-6">
+            <div className="  mb-6">
               <span className="font-semibold block mb-2">Description:</span>
               <ul className="list-disc list-inside">
                 {product.description.map((point, index) => (
@@ -135,7 +154,7 @@ const ProductDetails = () => {
                 ))}
               </ul>
             </div>
-            <div className="text-gray-600 mb-4">
+            <div className=" mb-4">
               <span className="font-semibold block mb-2">Attributes:</span>
               <ul className="list-disc list-inside">
                 <li>
