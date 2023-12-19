@@ -11,6 +11,7 @@ import Cart from "../Pages/cart/cart";
 import CartContext from "../context/CartContext";
 
 function Navbar() {
+  const [activeCategory, setActiveCategory] = useState(null);
   const [menuOpen, setMenuOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [cartVisible, setCartVisible] = useState(false); // State for cart visibility
@@ -19,6 +20,16 @@ function Navbar() {
 
   const toggleCart = () => {
     setCartVisible(!cartVisible);
+  };
+
+  const handleMouseEnter = (category) => {
+    setActiveCategory(category);
+  };
+
+  const handleMouseLeave = () => {
+    setTimeout(() => {
+      setActiveCategory(null);
+    }, 3000);
   };
 
   const toggleMenu = () => {
@@ -50,39 +61,61 @@ function Navbar() {
             </div>
           </div>
         )}
-        <div className="">
-          <Link className=" text-xl font-bold lg:text-2xl" to="/">
-            Frozen Fryday
+        <div className="brandname">
+          <Link className="nav-link brandname" to="/">
+            VougeNest
           </Link>
         </div>
         {(isMobile && menuOpen) || (
           <div className="Navlinks">
             <div
               className="main-category"
+              onMouseEnter={() => handleMouseEnter("Mens")}
+              onMouseLeave={handleMouseLeave}
             >
               <div className="nav-link">
-                <Link to="/velocity">Kababs</Link>
+                <Link to="/mens">Mens</Link>
               </div>
+              {activeCategory === "Mens" && (
+                <div className="submenu  ">
+                  <li>
+                    {" "}
+                    <Link to="/mens/sweatshirts">Shirts</Link>
+                  </li>
+                  <li>
+                    {" "}
+                    <Link to="/mens/bottom">Pants</Link>
+                  </li>
+                </div>
+              )}
             </div>
             <div
               className="main-category"
+              onMouseEnter={() => handleMouseEnter("Womens")}
+              onMouseLeave={handleMouseLeave}
             >
               <div className="nav-link">
-                <Link to="/velocity">Fried Chicken</Link>
+                <Link to="/womens">Womens</Link>
               </div>
+              {activeCategory === "Womens" && (
+                <div className="submenu ">
+                  <li>
+                    {" "}
+                    <Link to="/womens/Shirts">Shirts</Link>
+                  </li>{" "}
+                  <li>
+                    <Link to="/womens/outerwear">OuterWear</Link>
+                  </li>
+                </div>
+              )}
             </div>
             <div
               className="main-category"
+              onMouseEnter={() => handleMouseEnter("Kids")}
+              onMouseLeave={handleMouseLeave}
             >
               <div className="nav-link">
-                <Link to="/velocity">Samosa and Faves</Link>
-              </div>
-            </div>
-            <div
-              className="main-category"
-            >
-              <div className="nav-link">
-                <Link to="/velocity">Cheese</Link>
+                <Link to="/velocity">Velocity</Link>
               </div>
             </div>
             <div>
