@@ -6,7 +6,7 @@ const githublink = "https://github.com/Khizar-sheikh"
 const currentYear = new Date().getFullYear();
 function Footer() {
   return (
-    <footer style={{rowGap: "1rem"}} className="footer  footer-center p-2 bg-base-300 text-base-content ">
+    <footer style={{ rowGap: "1rem" }} className="footer  footer-center p-2 bg-base-300 text-base-content ">
       <div className="grid grid-flow-col gap-6  ">
         <Link className="link link-hover" to="/about">
           {" "}

@@ -122,15 +122,15 @@ nav {
   color: #c82a2a;
 }
 .responsive-navbar {
-  padding: 0px 0 1rem 0;
+  padding: -1px 0 1rem 0;
 }
 .responsive-navbar .Navlinks {
   display: flex;
   flex-direction: column;
   position: absolute;
   left: 0;
-  width: 50vw;
-  height: 400px;
+  width: 40vw;
+  height: 350px;
   top: 65px;
   border: 1px solid black;
   padding: 20px;
@@ -142,11 +142,11 @@ nav {
 .responsive-navbar .Navlinks .nav-link a {
   display: flex;
   color: white;
-  font-size: var(--large-font);
+  font-size: 20px;
   text-align: center;
   font-weight: bold;
   padding: 4px 0;
-  margin: 8px;
+  margin: 6px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 

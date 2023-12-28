@@ -63,8 +63,8 @@ const ProductGrid = ({ products, title }) => {
   };
 
   return (
-    <div className="pb-5">
-      <div className=" flex flex-col lg:flex-row md:flex-row justify-around items-center mt-3 xl:py-5 dark:bg-white dark:text-black  ">
+    <div className="dark:bg-gray-900 bg-white dark:text-gray-50 text-gray-900">
+      <div className=" flex flex-col lg:flex-row md:flex-row justify-around items-center pt-3 xl:py-5  ">
         <div>
           <h1 className="text-center text-3xl font-extrabold font-sans 2xl:text-5xl ">
             {title}
@@ -75,7 +75,7 @@ const ProductGrid = ({ products, title }) => {
           id="sortandstyle"
           className="flex justify-around items-center py-4 2xl:py-6 2xl:text-2xl "
         >
-          <div className="sorting">
+          <div className="sorting dark:text-gray-900">
             <select
               className="border border-gray-300 rounded-md py-4 px-12 focus:outline-none dark:bg-white "
               value={sortBy}
@@ -94,7 +94,7 @@ const ProductGrid = ({ products, title }) => {
         </div>
       </div>
 
-      <div className="bg-white relative">
+      <div className="relative">
         <div className="grid grid-cols-2 gap-x-3 mx-9 gap-y-10  md:grid-cols-3 lg:grid-cols-4">
           {currentItems.map((product, index) => (
             <div key={index} className="grid  justify-self-center">
@@ -107,8 +107,8 @@ const ProductGrid = ({ products, title }) => {
                 />
               </div>
               <div className="details 2xl:text-lg">
-                <h3 className="text-sm text-gray-900">{product.name}</h3>
-                <p className="mt-1 text-lg font-medium text-gray-900">
+                <h3 className="text-sm ">{product.name}</h3>
+                <p className="mt-1 text-lg font-medium ">
                   ${product.price}
                 </p>
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
@@ -124,7 +124,7 @@ const ProductGrid = ({ products, title }) => {
             </div>
           ))}
         </div>
-        <div className="my-5 mx-auto w-max">
+        <div className=" mx-auto w-max p-7 pt-8 ">
           <Pagination
             defaultCurrent={1}
             total={totalPages}

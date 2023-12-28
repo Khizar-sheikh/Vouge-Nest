@@ -1,5 +1,15 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-  
+.ant-pagination-item a:focus,
+.ant-pagination-item a:active {
+  outline: none;
+}
+:where(.css-dev-only-do-not-override-zcfrx9).ant-pagination
+  .ant-pagination-item
+  a {
+  display: block;
+  padding: 6px 6px;
+  color: rgba(0, 0, 0, 0.88);
+}
